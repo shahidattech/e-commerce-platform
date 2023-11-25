@@ -1,0 +1,66 @@
+{
+    "Men": {
+        "Footwear": [
+            "Sports Shoes",
+            "Casual Shoes",
+            "Formal Shoes",
+            "Sandals & Floaters",
+            "Flip-Flops",
+            "Loafers",
+            "Boots",
+            "Running Shoes",
+            "Sneakers"
+        ],
+        "Top wear": [
+            "T-Shirts",
+            "Formal Shirts",
+            "Casual Shirts"
+        ],
+        "Watches": [
+            "Fastrack",
+            "Casio",
+            "Titan",
+            "Fossil",
+            "Sonata"
+        ]
+    },
+    "Women": {
+        "Women Western & Maternity Wear": [
+            "Topwear",
+            "Dresses",
+            "Jeans",
+            "Shorts"
+        ],
+        "Sandals": [
+            "Flats",
+            "Heels",
+            "Wedges"
+        ],
+        "Shoes": [
+            "Sports Shoes",
+            "Casual Shoes",
+            "Boots"
+        ]
+    },
+    "Baby & Kids": {
+        "Boys' Clothing": [
+            "T-Shirts",
+            "Shirts",
+            "Innerwear"
+        ],
+        "Girls' Clothing": [
+            "Dresses & Skirts",
+            "Ethnic Wear",
+            "T-shirts & Tops",
+            "Innerwear"
+        ],
+        "Girls' Footwear": [
+            "Flats & Bellies",
+            "Sport Shoes"
+        ],
+        "Boys' Winter Wear": [
+            "Boys' Sweatshirts",
+            "Boys' Jacket"
+        ]
+    }
+}

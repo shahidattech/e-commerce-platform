@@ -1,0 +1,11 @@
+@media only screen and (max-width: 600px) {
+    .ps-section--offer .ps-column {
+        padding: 10px;
+    }
+    .ps-main .ps-section--features-product{
+        padding-bottom: 0px;
+    }
+    .ps-shoes--carousel{
+        padding: 30px 10px 10px;
+    }
+}

@@ -1,0 +1,499 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="list-group">
+
+        <a [routerLink]="['/layout/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-book"></i>&nbsp;
+            <span>{{ 'Dashboard' | translate }}</span>
+        </a>
+
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="productShowList = !productShowList">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Products' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="productShowList">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/product']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-book"></i>&nbsp;
+                            <span>{{ 'Add Product' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/product-list']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-book"></i>&nbsp;
+                            <span>{{ 'Product List' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/reviewed-product-list']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-book"></i>&nbsp;
+                            <span>{{ 'Review List' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <!-- <a [routerLink]="['/layout/product']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-book"></i>&nbsp;
+            <span>{{ 'Add Product' | translate }}</span>
+        </a> -->
+        <!-- <a [routerLink]="['/layout/product-list']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-book"></i>&nbsp;
+            <span>{{ 'Product List' | translate }}</span>
+        </a> -->
+
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="sliderList = !sliderList">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Sliders' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="sliderList">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/slider']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Slider ' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/slider-list']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Slider List' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <!-- <a [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Slider ' | translate }}</span>
+        </a>
+
+        <a [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Slider List' | translate }}</span>
+        </a> -->
+
+        <!-- <a [routerLink]="['/layout/slide-show']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Slide Show Add ' | translate }}</span>
+        </a> -->
+
+        <!-- <a [routerLink]="['/layout/slide-list']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Slide Show List' | translate }}</span>
+        </a> -->
+
+        <!-- <a [routerLink]="['/layout/home-config']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Home Page Builder' | translate }}</span>
+        </a> -->
+
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="slideShowList = !slideShowList">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Slide Show' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="slideShowList">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/slide-show']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Slide Show Add ' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/slide-list']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Slide Show List' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="OrdershowList = !OrdershowList">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Home Page Builder' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="OrdershowList">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/home-config-theme1']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Theme' | translate }}</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a [routerLink]="['/layout/home-config-theme2']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Theme 2' | translate }}</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </li>
+        </div>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="showList = !showList">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Orders & Customers' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showList">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/websiteorders']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Completed Orders' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/websitependingorders']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Pending Orders' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/shippedorders']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Shipped Orders' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/order-search-by-date']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Search Order By Date' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/customer-list']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Customer List' | translate }}</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a [routerLink]="['/layout/home-config-theme2']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Theme 2' | translate }}</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </li>
+        </div>
+
+        <a [routerLink]="['/layout/subscription']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-cog"></i>&nbsp;
+            <span>My Subscription</span>
+        </a>
+
+        <a [routerLink]="['/layout/settings']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-cog"></i>&nbsp;
+            <span>{{ 'My Settings' | translate }}</span>
+        </a>
+
+        <!-- <hr/> -->
+        <a class="list-group-item" [routerLink]="['/login']" (click)="onLoggedout()">
+            <i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}
+        </a>
+
+        <!-- <a [routerLink]="['/layout/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-book"></i>&nbsp;
+            <span>{{ 'Create Article' | translate }}</span>
+        </a>
+
+        <a [routerLink]="['/layout/administration']" [routerLinkActive]="['router-link-active']" class="list-group-item"
+            *ngIf="userService.roleMatch(['admin'])">
+            <i class="fa fa-fw fa-lock"></i>&nbsp;
+            <span>{{ 'Administration' | translate }}</span>
+        </a> -->
+        <!-- <a [routerLink]="['/layout/artist']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Artists' | translate }}</span>
+        </a> -->
+        <!-- <a [routerLink]="['/layout/getarticles']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'My Articles' | translate }}</span>
+        </a> -->
+        <!-- <a [routerLink]="['/layout/artwork']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Artwork' | translate }}</span>
+        </a> -->
+        <!-- <a [routerLink]="['/layout/events']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Events' | translate }}</span>
+        </a> -->
+        <!-- <a [routerLink]="['/layout/entity-Location']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Venue' | translate }}</span>
+        </a> -->
+
+        <!-- <a [routerLink]="['/layout/slide-show']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Slide Show' | translate }}</span>
+        </a> -->
+
+        <!-- <div class="nested-menu" *ngIf="userService.roleMatch(['admin'])">
+            <a class="list-group-item" (click)="showList = !showList">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'List' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showList">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/getarticles']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Article List' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/getArtwork']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Artwork List' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/popular-slideshow']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Popular slideshow' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/getEntityLocation']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Venu List' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/getEvent']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Event List' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/get-artist']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Artist List' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/get-slide-show']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Slide Show List' | translate }}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </div> -->
+
+        <!-- <div class="nested-menu">
+            <a class="list-group-item" (click)="showMenus = !showMenus">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Site Configuration' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenus">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/site-configuration']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Sliders' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/trending-configuration']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Trend configuration' | translate }}</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a [routerLink]="['/layout/top-global-stories']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Top global stories' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/features']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Features' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/popular-slideshow']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Popular slideshow' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/homepage']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span> {{ 'Homepage' | translate }}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </div> -->
+        <!--    <a [routerLink]="['/layout/trend']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+            <span>{{ 'Trend' | translate }}</span>
+        </a> -->
+        <!-- <div class="nested-menu">
+            <a class="list-group-item" (click)="showMenu = !showMenu">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Travels' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/travel-profile']">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Travel profile' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/travel-city']" [routerLinkActive]="['router-link-active']">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Travel city' | translate }}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </div> -->
+        <!-- <div class="nested-menu">
+            <a class="list-group-item" (click)="showMenudd = !showMenudd">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Microsite' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenudd">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/layout/microsite']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Microsite create' | translate }}</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a [routerLink]="['/layout/microsite-edit']" [routerLinkActive]="['router-link-active']"
+                            class="list-group-item">
+                            <i class="fa fa-fw fa-dribbble"></i>&nbsp;
+                            <span>{{ 'Microsite edit' | translate }}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </div> -->
+
+        <div class="header-fields">
+            <!-- <a (click)="rltAndLtr()" class="list-group-item">
+                <span><i class="fa fa-arrows-h"></i>&nbsp; RTL/LTR</span>
+            </a>
+            <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('languages')">
+                    <span><i class="fa fa-language"></i>&nbsp; {{ 'Language' | translate }} <b class="caret"></b></span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'languages'">
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('en')">
+                                {{ 'English' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('fr')">
+                                {{ 'French' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('ur')">
+                                {{ 'Urdu' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('es')">
+                                {{ 'Spanish' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('it')">
+                                {{ 'Italian' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('fa')">
+                                {{ 'Farsi' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('de')">
+                                {{ 'German' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+            <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('profile')">
+                    <span><i class="fa fa-user"></i>&nbsp; John Smith</span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'profile'">
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span><i class="fa fa-fw fa-user"></i> {{ 'Profile' | translate }}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span><i class="fa fa-fw fa-envelope"></i> {{ 'Inbox' | translate }}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span><i class="fa fa-fw fa-gear"></i> {{ 'Settings' | translate }}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/login']" (click)="onLoggedout()">
+                                <span><i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+        <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
+        <span>{{ 'Collapse Sidebar' | translate }}</span>
+    </div>
+</nav>

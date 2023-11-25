@@ -1,0 +1,82 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">Order Details</h4>
+  <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
+    (click)="modal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="card" *ngIf="data">
+    <div class="info">
+      <div class="row">
+        <div class="col-4"> <span id="heading">Date</span><br> <span id="details">{{data.added_date | date :
+            'mediumDate'}}</span> </div>
+        <div class="col-8 pull-right"> <span id="heading">Order No.</span><br> <span id="details">{{data._id}}</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="title">Name: {{data.shippingDetails.customerName }} </div>
+    <div class="title">Email: {{data.shippingDetails.email}}</div>
+    <div class="title">Phone: {{data.shippingDetails.phoneNumber}}</div>
+
+    <div class="title2">Shipping Details:</div>
+    <div class="shipinfo">
+      <div class="row mb-2">
+        <div class="col-6"> <span id="heading">Address line1</span><br> <span id="details">{{data.shippingDetails.addressLine1}}</span> </div>
+        <div class="col-6 pull-right"> <span id="heading">Address line2</span><br> <span id="details">{{data.shippingDetails.addressLine1}}</span>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"> <span id="heading">City</span><br> <span id="details">{{data.shippingDetails.city}}</span> </div>
+        <div class="col-6 pull-right"> <span id="heading">State</span><br> <span id="details">{{data.shippingDetails.state}}</span>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"> <span id="heading">LandMark</span><br> <span id="details">{{data.shippingDetails.landMark}}</span> </div>
+        <div class="col-6 pull-right"> <span id="heading">Pin</span><br> <span id="details">{{data.shippingDetails.pinCode}}</span>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-6"> <span id="heading">Phone Number</span><br> <span id="details"></span>{{data.shippingDetails.phoneNumber}}</div>
+        <div class="col-6 pull-right"> <span id="heading">Alternating Numbers</span><br> <span id="details">{{data.shippingDetails.alterNativeNumber}}</span>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-12"> <span id="heading">Email</span><br> <span id="details">{{data.shippingDetails.email}}</span> </div>
+        
+        <!-- <div class="col-7 pull-right"> <span id="heading">alterNativeNumber</span><br> <span id="details">{{data.shippingDetails.phoneNumber}}</span> -->
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="title2">Items</div>
+    <div class="pricing">
+      <div class="row" *ngFor="let product of data.orderDetails.products">
+        <div class="col-7"> <span id="name">{{product.title }}</span> </div>
+        <div class="col-2"> <span id="price">Q: {{product.quantity}}</span> </div>
+        <div class="col-3"> <span id="price">₹{{product.price}}</span> </div>
+      </div>
+    </div>
+    <div class="total">
+      <div class="row">
+        <div class="col-9">Courier Charges:</div>
+        <div class="col-3" *ngIf="data.additionalDetails && data.additionalDetails.courier_rate">₹{{data.additionalDetails.courier_rate}}</div>
+      </div>
+      <div class="row">
+        <div class="col-9">Order Amount:</div>
+        <div class="col-3" *ngIf="data.additionalDetails && data.additionalDetails.order_amount">₹{{data.additionalDetails.order_amount}}</div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-9">Total:</div>
+        <div class="col-3" *ngIf="data.additionalDetails && data.additionalDetails.order_amount && data.additionalDetails.courier_rate">₹{{total(data.additionalDetails.order_amount, data.additionalDetails.courier_rate)}}</div>
+        <div class="col-3" *ngIf="data.additionalDetails && data.additionalDetails.order_amount && !data.additionalDetails.courier_rate">₹{{data.additionalDetails.order_amount}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" (click)="modal.close('Ok click')">Ok</button>
+</div>

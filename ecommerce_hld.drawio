@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" modified="2023-11-25T05:59:11.315Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="1BKWkFN6DDEnEZggzvCn" version="22.1.4" type="device">
+  <diagram name="Page-1" id="yGfCb8lnB37j5m8WFR03">
+    <mxGraphModel dx="1050" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lLr1-RRwzh-4_BpI6x_X-1" target="lLr1-RRwzh-4_BpI6x_X-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-1" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="83" y="80" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-3" value="abc.com" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="113" y="110" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-4" value="cde.com" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="303" y="110" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-5" value="bcd.com" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="206" y="110" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-6" value="&lt;b&gt;Website_Server&lt;/b&gt;&lt;br&gt;&lt;br&gt;Restify Node.Js Server Serving Data to Websites for each Client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="178" y="280" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-7" value="&lt;b&gt;Website_php&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="188" y="80" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.363;entryY=1.053;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="lLr1-RRwzh-4_BpI6x_X-6" target="lLr1-RRwzh-4_BpI6x_X-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-10" value="&lt;b&gt;Sync_Server&lt;/b&gt;&lt;br&gt;&lt;br&gt;Restify Node.Js Server Syncs data from Mongo DB to Elastic Search to Empower Search on Website" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="388" y="267" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lLr1-RRwzh-4_BpI6x_X-11" target="lLr1-RRwzh-4_BpI6x_X-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="319" />
+              <mxPoint x="520" y="135" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-11" value="&lt;b&gt;Streamming_Server&lt;br&gt;&lt;/b&gt;&lt;br&gt;Restify Node.Js Server&amp;nbsp; Managing Media contents" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="544" y="265" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="925" y="234" as="targetPoint" />
+            <mxPoint x="866" y="339" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="866" y="320" />
+              <mxPoint x="925" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-13" value="&lt;b&gt;Admin_Server&lt;/b&gt;&lt;br&gt;&lt;br&gt;Restify Node.Js Server&amp;nbsp; CMS Backend&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="741" y="265" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lLr1-RRwzh-4_BpI6x_X-14" target="lLr1-RRwzh-4_BpI6x_X-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lLr1-RRwzh-4_BpI6x_X-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="601" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lLr1-RRwzh-4_BpI6x_X-14" target="lLr1-RRwzh-4_BpI6x_X-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-14" value="&lt;b&gt;Admin_Client&lt;br&gt;&lt;/b&gt;&lt;br&gt;Angular Client - Backend panel for Inventory/Order Management, Store Design" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="741" y="70" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lLr1-RRwzh-4_BpI6x_X-17" value="&lt;b&gt;API Endpoints for Logistics.&lt;/b&gt;&lt;br&gt;&lt;br&gt;This is Not Part &lt;br&gt;of this Project" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="120" width="120" height="230" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

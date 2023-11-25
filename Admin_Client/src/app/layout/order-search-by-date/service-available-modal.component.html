@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h4 class="modal-title">Service Availablity</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>COURIER COMPANY</th>
+                <th>RATES</th>
+                <th>Payment Method</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of rows">
+                <td>{{row.courier_name}}</td>
+                <td>{{row.rate}}</td>
+                <td>{{payment_method=="Prepaid"?"PREPAID":"COD"}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="shipOrder(row)">Ship</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

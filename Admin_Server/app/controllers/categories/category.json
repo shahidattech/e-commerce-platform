@@ -1,0 +1,833 @@
+{
+    "Men": {
+        "Footwear": [
+            "Sports Shoes",
+            "Casual Shoes",
+            "Formal Shoes",
+            "Sandals & Floaters",
+            "Flip-Flops",
+            "Loafers",
+            "Boots",
+            "Running Shoes",
+            "Sneakers"
+        ],
+        "Top wear": [
+            "T-Shirts",
+            "Formal Shirts",
+            "Casual Shirts"
+        ],
+        "Bottom wear": [
+            "Jeans",
+            "Casual Trousers",
+            "Formal Trousers",
+            "Track pants",
+            "Shorts",
+            "Cargos",
+            "Three Fourths"
+        ],
+        "Winter Wear": [
+            "Sweatshirts",
+            "Jackets",
+            "Sweater",
+            "Tracksuits"
+        ],
+        "Ethnic wear": [
+            "Kurta",
+            "Ethnic Sets",
+            "Sherwanis",
+            "Ethnic Pyjama",
+            "Dhoti",
+            "Lungi"
+        ],
+        "Innerwear & Loungewear": [
+            "Briefs&Trunks",
+            "Vests",
+            "Boxers",
+            "Pyjamas and Lounge Pants",
+            "Thermals",
+            "Night suits"
+        ],
+        "Watches": [
+            "Fastrack",
+            "Casio",
+            "Titan",
+            "Fossil",
+            "Sonata"
+        ],
+        "Men's Grooming": [
+            "Deodorants",
+            "Perfumes",
+            "Beard Care & Grooming",
+            "Shaving&Aftershave",
+            "Sexual Wellness"
+        ],
+        "Accessories": [
+            "Backpacks",
+            "Wallets",
+            "Belts",
+            "Sunglasses",
+            "Luggage & Travel",
+            "Frames",
+            "Jewellery"
+        ],
+        "Personal Care Appliances": [
+            "Trimmers",
+            "Shavers",
+            "Grooming Kits"
+        ],
+        "Featured": [
+            "Watches Store",
+            "Footwear Club",
+            "Bags&Wallet",
+            "TShirt Store",
+            "Adidas",
+            "Beardo",
+            "Reebok",
+            "Skechers",
+            "Nike"
+        ],
+        "Suits, Blazers&Waistcoats": [],
+        "Ties, Socks, Caps & More": [],
+        "Fabrics": [],
+        "Smart Watches": [],
+        "Smart Bands": []
+    },
+    "Women": {
+        "Women Western & Maternity Wear": [
+            "Topwear",
+            "Dresses",
+            "Jeans",
+            "Shorts",
+            "Skirts",
+            "Jeggings& Tights",
+            "Trousers & Capris"
+        ],
+        "Sandals": [
+            "Flats",
+            "Heels",
+            "Wedges"
+        ],
+        "Shoes": [
+            "Sports Shoes",
+            "Casual Shoes",
+            "Boots"
+        ],
+        "Lingerie &Sleepwear": [
+            "Bras",
+            "Panties",
+            "Lingerie Sets",
+            "Night Dresses & Nighties",
+            "Shapewear",
+            "Camisoles & Slips"
+        ],
+        "Ethnic Wear": [
+            "Sarees",
+            "Kurtas&Kurtis",
+            "Dress Material",
+            "Lehenga Choli",
+            "Blouse(Ready-made)",
+            "Kurta Sets &Salwar Suits",
+            "Gowns",
+            "Dupattas",
+            "Churidar piece",
+            "Kurtti",
+            "Plazo set",
+            "Blouse piece",
+            "Skirt kurti",
+            "Swall",
+            "Stole"
+        ],
+        "Ethnic Bottoms": [
+            "Leggings &Churidars",
+            "Palazzos",
+            "Shararas",
+            "Salwars & Patiala",
+            "Dhoti Pants",
+            "Ethnic Trousers",
+            "Saree Shapewear &Petticoats"
+        ],
+        "Personal Care Appliances": [
+            "Hair Straightners",
+            "Hair Dryers",
+            "Epilators"
+        ],
+        "Beauty&Grooming": [
+            "Make Up",
+            "Skin Care",
+            "Hair Care",
+            "Bath &Spa",
+            "Deodorants & Perfumes"
+        ],
+        "Jewellery": [
+            "Artificial Jewellery",
+            "Silver Jewellery",
+            "Precious Jewellery",
+            "Coins and Bars",
+            "Necklace",
+            "Earrings",
+            "Gold",
+            "Silver",
+            "Resin",
+            "Pearls and beads",
+            "Silk thread",
+            "Finger rings",
+            "Bracelets",
+            "Earrings-Gold",
+            "Earrings-Resin",
+            "Earrings-Pearls and beads",
+            "Earrings-Silk thread",
+            "Finger rings",
+            "Komorband",
+            "Tikli taira",
+            "Crown",
+            "Nose ring",
+            "Bangles",
+            "Others"
+        ],
+        "Accessories": [
+            "Handbags",
+            "Shoulder Bags",
+            "Totes",
+            "Sling bags",
+            "Clutches",
+            "Wallets& Belts",
+            "Luggage& Travel"
+        ],
+        "Shari": [
+            "Jamdani",
+            "Cotton (home wear)",
+            "Handloom",
+            "Tant",
+            "Handloom cotton",
+            "Cotton printed saree",
+            "South Indian Handloom cotton",
+            "Silk",
+            "Odisha Handloom cotton",
+            "Tassar",
+            "Bengal 's Dhakai Jamdani"
+        ],
+        "Nighty": [
+            "Short sleeve",
+            "Three quarter sleeve"
+        ],
+        "Ballerinas": [],
+        "Slippers& Flip- Flop's": [],
+        "Watches": [],
+        "Smart Watches": []
+    },
+    "Baby & Kids": {
+        "Boys' Clothing": [
+            "T-Shirts",
+            "Shirts",
+            "Innerwear"
+        ],
+        "Girls' Clothing": [
+            "Dresses & Skirts",
+            "Ethnic Wear",
+            "T-shirts & Tops",
+            "Innerwear"
+        ],
+        "Girls' Footwear": [
+            "Flats & Bellies",
+            "Sport Shoes"
+        ],
+        "Boys' Winter Wear": [
+            "Boys' Sweatshirts",
+            "Boys' Jacket"
+        ],
+        "Toys": [
+            "Remote Control Toys",
+            "Educational Toys",
+            "Soft Toys",
+            "Cars &Die-cast Vehicles",
+            "Outdoor Toys",
+            "Action Figures",
+            "Board Games",
+            "Musical Toys",
+            "Dolls &Doll Houses",
+            "Puzzles",
+            "S.T.E.M Toys",
+            "Helicopter & Drones",
+            "Toy Guns",
+            "Party Supplies"
+        ],
+        "Baby Care": [
+            "Diapers",
+            "Wipes",
+            "Diapering& Potty Training",
+            "Baby Bath, Hair & Skin Care",
+            "Baby Grooming",
+            "Baby Bathing Accessories",
+            "Baby Gift Sets & Combo",
+            "Baby Oral Care",
+            "Nursing & Breast Feeding",
+            "Baby Food"
+        ],
+        "Featured brands": [
+            "Miss&Chief",
+            "Barbie",
+            "Disney",
+            "United Colors of Benetton"
+        ]
+    },
+    "Electronics": {
+        "Mobile": [
+            "MI",
+            "Samsung",
+            "Realme",
+            "Infinix",
+            "OPPO",
+            "Apple",
+            "Vivo",
+            "Honor",
+            "Asus",
+            "Motorola"
+        ],
+        "Mobile Accessories": [
+            "Mobile Cases",
+            "Headphones & Headsets",
+            "Power Banks",
+            "Screenguards",
+            "Memory Cards",
+            "Smart Headphones",
+            "Mobile Cables",
+            "Mobile Chargers",
+            "Mobile Holders"
+        ],
+        "Smart Wearable Tech": [
+            "Smart Watches",
+            "Smart Glasses (VR)",
+            "Smart Bands"
+        ],
+        "Health Care Appliances": [
+            "Bp Monitors",
+            "Weighing Scale"
+        ],
+        "Laptops": [],
+        "Desktop PCs": [],
+        "Gaming& Accessories": [],
+        "Computer Accessories": [
+            "External Hard Disks",
+            "Pendrives",
+            "Laptop Skins & Decals",
+            "Laptop Bags",
+            "Mouse"
+        ],
+        "Computer Peripherals": [
+            "Printers & Ink Cartridges",
+            "Monitors"
+        ],
+        "Speakers": [
+            "Home Audio Speakers",
+            "Home Theatres",
+            "Soundbars",
+            "Bluetooth Speakers",
+            "DTH Set Top Box"
+        ],
+        "Camera": [
+            "DSLR & Mirrorless",
+            "Compact & Bridge Cameras",
+            "Sports & Action"
+        ],
+        "Camera Accessories": [
+            "Lens",
+            "Tripods"
+        ],
+        "Tablets": [],
+        "Network Components": [],
+        "Featured": [
+            "Google Assistant Store",
+            "Laptops on Buyback Guarantee",
+            "Flipkart SmartBuy",
+            "L-Polymer Power Banks",
+            "Sony PS4 Pro & Slim",
+            "Apple Products",
+            "Microsoft Store",
+            "Philips",
+            "Dr. Morepen",
+            "Complete Mobile Protection",
+            "Mobiles No Cost EMI"
+        ]
+    },
+    "Food": {
+        "Chocolates& Candies": [
+            "Toffee. Candy & Lollypop",
+            "Mints & Chewing Gum"
+        ],
+        "Noodle, Pasta, Vermicelli": [
+            "Instant Noodles",
+            "Hakka Noodles",
+            "Instant Pasta",
+            "Cup Noodles"
+        ],
+        "Breakfast Cereals": [],
+        "Biscuits& Cookies": [
+            "Marie. Health. Digestive",
+            "Glucose & Milk Biscuits",
+            "Salted Biscuits",
+            "Cookies"
+        ],
+        "Frozen Veggies&Snacks": [],
+        "Spreads, Sauces, Ketchup": [],
+        "Snacks & Namkeen": [],
+        "Ready To Cook & Eat": [],
+        "Pickles & Chutney": [
+            "Lime & Mango Pickle",
+            "Chutney powder",
+            "Other veg Pickle",
+            "Non veg pickle"
+        ],
+        "Traditional Bengali":[
+            "মোয়া (Moa)",
+            "পাটালি (Patali)",
+            "বাদাম চাপা (Badam Chapa)"
+        ],
+        "Indian Mithai": [],
+        "Modhu": [
+            "Kholse fuler modhu",
+            "Mixed flower modhu",
+	    "Kewra fuler modhu"
+        ],
+        "Achar": [
+            "Aam tok misti jhal jelly achar",
+            "Aam tok misti jhal piece achar",
+            "Aam jhal tel moshla achar",
+            "Jolpai tok misti jhal achar",
+            "Jolpai tel jhal moshla achar",
+            "Koromcha tok misti jhal achar",
+            "Kul tok misti jhal achar",
+            "Tetul tok misti jhal achar",
+            "Lonka jhal tel moshla achar",
+            "Lebu jhal tel moshla achar",
+            "Ada rasun kancha lonka tel moshal  achar",
+            "Aam tel moshla achar (piece)",
+            "Aam tel mosha achar (bata)"
+        ],
+        "Ghee": [],
+        "Gur": [
+            "Khejur gur",
+            "Tal gur"
+        ],
+        "Patali": [],
+        "Dal bori": []
+    },
+    "Beauty & Hygiene": {
+        "Makeup": [
+            "Face",
+            "Nails",
+            "Lips",
+            "Eyes",
+            "Makeup Accessories",
+            "Makeup Kits & Gift Sets",
+            "Primer,BB cream",
+            "loose powder",
+            "illuminator",
+            "makeup fixer",
+            "shimmer setting spray",
+            "kajal",
+            "lipstick",
+            "sindur"
+        ],
+        "Oral Care": [
+            "Mouthwash",
+            "Toothpaste",
+            "Toothbrush",
+            "Floss & Tongue Cleaner",
+            "Electric Toothbrush"
+        ],
+        "Feminine Hygiene": [
+            "Sanitary Nopkins",
+            "Panty Liners",
+            "Hoir Removal"
+        ],
+        "Bath & Hand Wash": [
+            "Hand Wash & Sanitizers",
+            "Bothing Bars & Soaps",
+            "Shower Gel & Body Wash",
+            "Talcum Powder"
+        ],
+        "Hair Care": [
+            "Hair Oil & Serum",
+            "Shampoo & Conditioner",
+            "Hair Color",
+            "Hair growdth Spray(vertilizer&tonic)",
+            "Touch and nourish hair oil",
+            "Touch and nourish shampoo",
+            "anti dandruff shampoo",
+            "softeei Hair serum",
+            "conditoner",
+            "Smoothei hair spa",
+            "hair mask",
+            "hair mask gel",
+            "bootax Gel",
+            "Onion bootax gel",
+            "Hair Gel",
+            "Hair Fixing Spray",
+            "Hairfall care",
+            "Dandruff care",
+            "Spa care",
+            "hair oil"
+        ],
+        "Special Care": [
+            "lip gloss oil",
+            "Lip balm,lip scrub",
+            "under eye gel",
+            "under eye oil",
+            "under arm cream",
+            "Nail growth oil",
+            "nail growth gel",
+            "Eyebrow & eyelashes growth gel",
+            "Toothpaste powder",
+            "Sun powder",
+            "magic powder",
+            "foot cream",
+            "foot Butter",
+	    "Lip Mask",
+	    "Food Scrub",
+	    "Eye Cream"
+        ],
+        "Air Freshener":[],
+        "Men's Grooming": [],
+        "Skin Care": [
+            "Face Care",
+            "Body Care",
+            "Lip Care",
+            "Eye Care",
+            "Soap",
+            "Gel",
+            "Serum",
+            "Cream",
+            "Face-wash",
+            "Toner",
+            "Cleanser",
+            "Face-pack",
+            "Scrub",
+            "Face-mask",
+            "Massage gel",
+            "Face oil",
+            "Serum",
+            "Massage oil",
+            "Moisturizer",
+            "Oily to sensetive",
+            "Normal to dry",
+            "Polishing renge all skintype",
+            "Skin serum",
+            "Tan clear renge",
+            "Sunscreen",
+            "Mask Gel",
+            "Sleeping Mask Gel",
+	    "Foaming cleanser with facewash",
+            "Facial Kits",
+	    "Whipped cream Cleanser",
+	    "Facial bomb",
+	    "Facial Daily use range",
+            "Gel Cleanser",
+            "Sheet mask serum"
+        ],
+        "Oily skin":[
+            "Clear gel",
+            "Clear fach wash",
+            "Clear pack",
+            "Clear toner",
+            "Tan Clear scrub", 
+            "Tan Clear cream"
+        ],
+         "Dry skin":[
+             "Fair face wash",
+             "Fair pack",
+             "Fair gel",
+             "Fair toner"
+        ],
+        "Fragrances & Deos": [
+            "Perfume",
+            "Womens Deodorants",
+            "Men's Deodorants"
+        ],
+        "Body Care": [
+            "Soap",
+            "Scrub",
+            "Body",
+            "Oil",
+            "Body Butter",
+            "body pack",
+            "Body-wash",
+            "Body mist",
+            "Deodorant spray",
+            "Bath Salt"
+        ],
+        "Baby Care":[
+            "Baby cream",
+            "Baby hair oil",
+            "Baby shampoo",
+            "Baby massage oil",
+            "Baby powder",
+            "Baby body lotion",
+            "Soap"
+        ],
+        "Health Care":[
+            "Weight loss powder",
+            "Belly fat loss powder",
+            "Immunity food powder",
+            "Glow boosting drink powder",
+            "Green tea"
+        ]
+    },
+    "Heath Care": {
+        "Weight Loss Powder": [],
+        "Belly Fat Loss Powder": [],
+        "Breast Loss Powder": [],
+        "Immunity Powder": [],
+        "Weight Gain Powder": [],
+        "Baby Protein Powder": [],
+        "Skin Bootax Glowing Powder": []
+    },
+    "Cakes": {
+        "Tea Cakes": [],
+        "Sice Cakes": [],
+        "Muffins & Cup Cakes": [],
+        "Pastries& Brownies": [],
+        "Birthday & Party Cakes": [],
+        "Doughnuts & Mousses": [],
+        "Britonnia Cake": []
+    },
+    "TVs & Appliances": {
+        "Television": [],
+        "New Launches": [],
+        "Smart& Ultra HD": [],
+        "Top Brands": [
+            "Mi",
+            "Vu",
+            "Thomson",
+            "Samsung",
+            "iFFALCON by TCL",
+            "Nokia",
+            "LG ",
+            "Realme",
+            "Motorola"
+        ],
+        "Shop by Screen Size": [
+            "24 & below ",
+            "28-32 ",
+            "39-43 ",
+            "48-55 ",
+            "60 & above"
+        ],
+        "Washing Machine": [
+            "Fully Automatic Front Load",
+            "Semi Automatic Top Load",
+            "Fully Automatic Top Load"
+        ],
+        "Air Conditioners": [
+            "Inverter AC",
+            "Split ACs",
+            "Window ACs"
+        ],
+        "Refrigerators": [
+            "Single Door",
+            "Double Door",
+            "Triple door",
+            "Side by Side",
+            "Convertible"
+        ],
+        "Kitchen Appliances": [
+            "Microwave Ovens",
+            "Oven Toaster Grills (OTG)",
+            "Juicer/Mixer/Grinder",
+            "Electric Kettle",
+            "Induction Cooktops",
+            "Chimneys",
+            "Hand Blenders",
+            "Sandwich Makers",
+            "Pop Up Toasters",
+            "Electric Cooker"
+        ],
+        "Small Home Appliances": [
+            "Irons",
+            "Water Purifiers",
+            "Fans",
+            "Air Coolers",
+            "Inverters",
+            "Vacuum Cleaners",
+            "Sewing Machines",
+            "Voltage Stabilizers",
+            "Water Geysers",
+            "Immersion Rods"
+        ]
+    },
+    "Home & Furniture": {
+        "Kitchen Storage": [
+            "Water Bottles",
+            "Lunch Boxes",
+            "Flasks",
+            "Casseroles",
+            "Kitchen Containers"
+        ],
+        "Bed Room Furniture": [
+            "Beds",
+            "Mattresses",
+            "Wardrobes"
+        ],
+        "Living Room Furniture": [
+            "Sofa",
+            "Sofa Beds",
+            "TV Units",
+            "Dining Tables & Chairs",
+            "Coffee Tables",
+            "Shoe Racks"
+        ],
+        "Furnishing": [
+            "Bedsheets",
+            "Curtains",
+            "Cushions &Pillows",
+            "Blankets",
+            "Bath Towels",
+            "Kitchen & Table Linen",
+            "Floor Coverings"
+        ],
+        "Home Decor": [
+            "Paintings",
+            "Clocks",
+            "Wall Shelves",
+            "Stickers",
+            "Showpieces & Figurines"
+        ],
+        "Home Lighting": [
+            "Bulbs",
+            "Wall Lamp",
+            "Table Lamp",
+            "Ceiling Lamp",
+            "Emergency Lights"
+        ],
+        "Pet Supplies": [
+            "Dogs",
+            "Cats",
+            "Fish & Aquatics"
+        ],
+        "Gardening Store": [
+            "Stainless Steel Store",
+            "Milton",
+            "Bombay Dyeing @home",
+            "HomeTown",
+            "Ajanta",
+            "Spaces by Welspun",
+            "Prestige"
+        ]
+    },
+    "Sports, Books & More": {
+        "Sports": [
+            "Cricket",
+            "Badminton",
+            "Cycling",
+            "Football",
+            "Skating",
+            "Camping & Hiking",
+            "Swimming"
+        ],
+        "Exercise Fitness": [
+            "Cardio Equipment",
+            "Home Gyms",
+            "Support",
+            "Dumbbells",
+            "Ab Exercisers",
+            "Shakers & Sippers",
+            "Yoga Mat",
+            "Gym Gloves"
+        ],
+        "Food Essentials": [
+            "Nuts & Dry Fruits",
+            "Tea, Coffee and Beverages",
+            "Chocolates",
+            "Snacks Corner",
+            "Gifting Combos",
+            "Sweets Store",
+            "Jams, Spreads and Honey",
+            "Breakfast Items"
+        ],
+        "Health & Nutrition": [
+            "All Supplements",
+            "Protein Supplements",
+            "Vitamin Supplements",
+            "Health Drinks",
+            "Ayurvedic Supplements"
+        ],
+        "Books": [
+            "Entrance Exams",
+            "Academics",
+            "Literature & Fiction",
+            "Non Fiction",
+            "Young Readers",
+            "Self-Help",
+            "E-Learning",
+            "Preorders",
+            "Indian Languages"
+        ],
+        "Stationery": [
+            "Pens",
+            "Diaries",
+            "Card Holders",
+            "Desk Organizers",
+            "Calculators",
+            "Key Chains"
+        ],
+        "Auto Accessories": [
+            "Helmets & Riding Gears",
+            "Car Audio/Video",
+            "Car Mobile Accessories",
+            "Car & Bike Care",
+            "Vehicle Lubricants"
+        ],
+        "Music": [
+            "Musical Instruments",
+            "Music",
+            "Movies & Tv shows"
+        ],
+        "Gaming": [
+            "Gaming Consoles",
+            "Gaming Accessories",
+            "PS4 Games",
+            "Smart Glasses (VR)"
+        ]
+    },
+    "Wrapper": {
+        "Plastic": [
+            "Courier Bag",
+            "Silver Foil",
+            "Bubble Wrap",
+            "Golden Ziplock",
+            "Plan Platic Ziplock",
+            "Transparent envelopes",
+            "Stretch Wrap"
+        ],
+        "Paper": [
+            "Postal envelopes",
+            "Brown Wrap",
+            "Paper Ziplock"
+        ]
+    },
+    "Box":{
+        "Gift Box":[],
+        "Cake Box":[],
+        "Cartoons":[]
+    },
+    "Bag": {
+        "Gift Bag":[],
+        "Grocery Bag":[],
+        "Cake carrier":[]
+    },
+    "Tools":{
+        "Cellotape":[],
+        "Scissor":[],
+        "Measurring tape":[],
+        "Weighing machine":[],
+        "Marker Pen":[]
+    },
+    "Dog food":{},
+    "Dog treat" :{},
+    "Dog toy":{},
+    "Dog bed":{},
+    "Dog house":{},
+    "Dental care":{},
+    "Diaper":{},
+    "Vitality":{},
+    "Dog grooming":{}
+}

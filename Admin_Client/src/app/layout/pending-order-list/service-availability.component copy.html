@@ -1,0 +1,93 @@
+<div class="bh-bazar-welcome">   
+    <mat-dialog-content>
+            <div class="card-block p-0">
+                    <ngx-datatable #table style="width: 100%" class="material" [rows]="rows" [headerHeight]="50" [footerHeight]="50"
+                        [rowHeight]="'auto'" [limit]="10">
+                        
+                        <!-- <ngx-datatable-column>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <span><input id={{row.courier_company_id}} type="checkbox" ></span>
+                            </ng-template>
+                        </ngx-datatable-column> -->
+    
+                        <ngx-datatable-column name="COURIER COMPANY">
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <span>{{row.courier_name}}</span>
+                            </ng-template>
+                        </ngx-datatable-column>
+
+                        <ngx-datatable-column name="RATES">
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <span>{{row.rate}}</span>
+                                <!-- <span *ngIf="commission">{{(row.rate * commission / 100.0) + row.rate}}</span>
+                                <span *ngIf="!commission">{{(row.rate * 7/100.0) + row.rate}}</span> -->
+                            </ng-template>
+                        </ngx-datatable-column>
+
+                        <!-- <ngx-datatable-column name="RATING">
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <span>{{row.rating}}</span>
+                            </ng-template>
+                        </ngx-datatable-column> -->
+
+                        <ngx-datatable-column name="Payment Method">
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <span>{{payment_method=="Prepaid"?"PREPAID":"COD"}}</span>
+                            </ng-template>
+                        </ngx-datatable-column>
+
+                        <ngx-datatable-column name="       ">
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <button class="btn btn-accent btn-round float-right m-t-20 m-b-20" (click)="shipOrder(row)">Ship
+                                    </button>
+                            </ng-template>
+                        </ngx-datatable-column>
+
+                    </ngx-datatable>
+            </div>            
+        <!-- <div class="div-sec">
+            <h2>Congratulations!!! <br>Your bank is now linked to your Website</h2>            
+        </div> -->
+        <div class="button-row">
+            <button mat-flat-button (click)="finish()">Close</button>
+        </div>            
+    </mat-dialog-content>
+ </div>
+
+
+ <style>
+     
+    /* .bh-bazar-welcome mat-dialog-content{
+        position: fixed;
+        left: 20%;
+        top: 0%;
+        background-color: white;
+        z-index: 100000;
+    } */
+    .bh-bazar-welcome mat-dialog-content h2{
+        color:yellow;
+    }
+    .bh-bazar-welcome mat-dialog-content p{
+        color:white;
+    }
+    .div-sec{
+        padding:25px;
+        /* height: 300px; */
+    }
+   
+    @media screen and (max-width: max-hight) {
+        .bh-bazar-welcome mat-dialog-content p{
+            /* width: 500px;
+            padding-left: 295px; */
+
+        }
+        .mat-dialog-content {
+            display: block;
+            /* margin: 0px -375px; */
+        }
+    }
+    .ngx-datatable.material{
+        overflow-x: scroll;
+    }
+
+</style>

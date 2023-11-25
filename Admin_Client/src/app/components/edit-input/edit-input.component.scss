@@ -1,0 +1,22 @@
+$lightGray: #c8c8c8;
+
+.top-div {
+    font-size: 20px;
+}
+.cell {
+    border: 2px solid transparent;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+
+    &:hover {
+        cursor: pointer;
+        border: 2px dashed $lightGray;
+    }
+}
+.cellInput {
+    border: 2px solid transparent;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}

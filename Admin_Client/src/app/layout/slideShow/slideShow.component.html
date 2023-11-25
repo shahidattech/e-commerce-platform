@@ -1,0 +1,115 @@
+<div class="col-lg-12">
+
+</div>
+<div class="article_part_form">
+
+  <form method="post" en [formGroup]="SlideShowForm" enctype="multipart/form-data">
+
+    <div class="col-lg-8  pull-left">
+      <div class="col-lg-12 no-padding">
+
+        <div class="card card-default">
+          <div class="card-header">
+              Slide show details
+          </div>
+          <div class="card-body">
+              <fieldset>
+                  <label class="ng-tns-c9-1">Title<span class="asstrick">*</span></label>
+                  <input type="text" formControlName="title" [ngClass]="{'form-control': true,'is-invalid': SlideShowForm.controls.title.invalid && SlideShowForm.controls.title.touched,'is-valid': SlideShowForm.controls.title.valid}" />
+                  <small id="fnHelp"
+                      *ngIf="SlideShowForm.controls.title.errors?.required && SlideShowForm.controls.title.touched"
+                      class="form-text custom-invalid-feedback">Please fill the titile
+                  </small>
+                  <small id="fnHelp"
+                      *ngIf="SlideShowForm.controls.title.errors?.minlength && SlideShowForm.controls.title.touched"
+                      class="form-text custom-invalid-feedback">Value must contain atleast 5 characters
+                  </small>
+              </fieldset>
+              <fieldset>
+                  <label class="ng-tns-c9-1">Short Title<span class="asstrick">*</span> <span
+                          class="gray_content">(Maximum: 60 characters) </span></label>
+                  <input type="text"
+                      [ngClass]="{'form-control': true, 'is-invalid': SlideShowForm.controls.shortTitle.invalid && SlideShowForm.controls.shortTitle.touched, 'is-valid': SlideShowForm.controls.shortTitle.valid}"
+                      formControlName="shortTitle" />
+                  <small id="fnHelp"
+                      *ngIf="SlideShowForm.controls.shortTitle.errors?.required && SlideShowForm.controls.shortTitle.touched"
+                      class="form-text custom-invalid-feedback">Please fill the short title
+                  </small>
+                  <small id="fnHelp"
+                      *ngIf="SlideShowForm.controls.shortTitle.errors?.maxlength && SlideShowForm.controls.shortTitle.touched"
+                      class="form-text custom-invalid-feedback">Maximum length of short title is 50
+                  </small>
+              </fieldset>
+              <fieldset>
+                  <label class="ng-tns-c9-1">Description<span class="asstrick">*</span> <span
+                          class="gray_content">(Maximum: 180 characters) </span></label>
+                  <textarea
+                      [ngClass]="{'form-control': true, 'is-invalid': SlideShowForm.controls.description.invalid && SlideShowForm.controls.description.touched, 'is-valid': SlideShowForm.controls.description.valid}"
+                      formControlName="description" rows="5"></textarea>
+                  <small id="fnHelp"
+                      *ngIf="SlideShowForm.controls.description.errors?.required && SlideShowForm.controls.description.touched"
+                      class="form-text custom-invalid-feedback">Please fill the description
+                  </small>
+                  <small id="fnHelp"
+                      *ngIf="SlideShowForm.controls.description.errors?.maxlength && SlideShowForm.controls.description.touched"
+                      class="form-text custom-invalid-feedback">Maximum length of description is 500
+                  </small>
+              </fieldset>
+          </div>
+        </div>
+
+        <div class="card card-default mb-3">
+          <div class="card-header">
+            Top slider
+          </div>
+          <fieldset class="col-lg-12 no-padding">
+            <table class="table table-bordered" formGroupName="slideshow_carousel">
+              <thead>
+                <tr>
+                  <th colspan="">
+                    images
+                  </th>
+                  <th>Order</th>
+                  <th>Slides</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let group of addcarouselArray.controls; let i = index;" [formGroupName]="i">
+                  <td>
+                    <label>Upload Photo (900x600 max size)</label>
+                    <img [src]='uploadedSideshowImage[i].location' alt="Forest" style="width:150px"
+                      *ngIf="uploadedSideshowImage">
+                    <input class="form-control" type="file" formControlName="events_carousel_images"
+                      (change)="get_event_carousel_images($event)" />
+                  </td>
+                  <td>
+                    <select class="form-control" style="width: 100px; ">
+                      <option>{{i}}</option>
+                    </select>
+                  </td>
+                  <td align="center" style="width: 150px; ">
+                    <button class="btn btn-primary" style="margin-right:10px;margin-bottom:20px;"
+                      (click)="addcarousel()"><i class="fa fa-plus"></i></button>
+                    <button class="btn btn-danger" style="margin-right:10px;margin-bottom:20px;"
+                      (click)="removecarousel(i)"><i class="fa fa-minus"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+        </div>
+
+      </div>
+    </div>
+    
+
+    <div class="col-lg-12 row submit_button">
+
+      <button type="button" (click)="submitForm()" class="btn btn-primary" [disabled]="SlideShowForm.invalid" >Save <i
+          class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+      <button type="button" class="btn btn-secondary">Preview </button>
+
+    </div>
+
+  </form>
+</div>

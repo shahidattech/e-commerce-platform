@@ -1,0 +1,39 @@
+<div class="pricing-header px-3 py-3 pt-md-2 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">{{subscriptionContent.heading.title}}</h1>
+  <p class="lead">{{subscriptionContent.heading.short_title}}</p>
+  <p class="lead mysubscription" *ngIf="mySubscription && mySubscription.isExpired == false && mySubscription.subscription_expire_date">Subscription Valid Till: {{mySubscription.subscription_expire_date}}</p>
+  <p class="lead mysubscription" *ngIf="mySubscription && mySubscription.isExpired == true">Subscription already expired !! <span *ngIf="mySubscription.subscription_expire_date">({{mySubscription.subscription_expire_date}})</span></p>
+</div>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 box-shadow" *ngFor="let p of subscriptionContent.plans">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{p.title}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">₹{{p.per_month}} <small class="text-muted">/ mo</small></h1>
+        <h3 class="card-title pricing-card-title text-success">Total ₹{{p.total}}</h3>
+        <p class="gst" *ngIf="p.gst_percentage">(including {{p.gst_percentage}}% gst)</p>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Manage your products</li>
+          <li>Customize your website</li>
+          <li>Orders management</li>
+          <li>Help center access</li>
+        </ul>
+
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="payNow(p)">Pay Now</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="assets/images/logo.png" alt="logo" height="50">
+        <small class="d-block mb-3 text-muted">© 2021-2022</small>
+      </div>
+
+    </div>
+  </footer>
+</div>

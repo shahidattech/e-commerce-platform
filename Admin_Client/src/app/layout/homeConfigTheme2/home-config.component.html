@@ -1,0 +1,268 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col products-models">
+
+      <div class="float-right menu-ctrl" (click)="pannelMenu()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+
+      <div style="text-align: center;">
+        <!-- <img style="width: 90%;" src="https://img.lovepik.com//back_pic/05/81/72/665c3a00fe4a0e2.jpg_wh860.jpg" alt=""> -->
+        <ngb-carousel style="width: 90%;">
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img style="width: 650px;" src="https://img.lovepik.com//back_pic/05/81/72/665c3a00fe4a0e2.jpg_wh860.jpg"
+                alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img style="width: 650px;"
+                src="https://image.freepik.com/free-vector/abstract-dotted-banner-background_1035-18160.jpg"
+                alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img style="width: 650px;"
+                src="https://softonicsolution.com/wp-content/uploads/2018/08/e-commerce-banner-1024x341.jpg"
+                alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+
+      <app-edit-input [data]='section1_title' (focusOut)='setSection1Title($event)'></app-edit-input>
+
+      <!-- <h3 class="text-center">Deals of the week</h3> -->
+      <cdk-drop #sectionOne id="sectionOne" [data]="section_1" orientation="horizontal" [connectedTo]="['productList']"
+        (dropped)="drop($event)">
+        <!-- <div class="row" *ngIf="section_1 && section_1.length > 0; else noSection1Product"> -->
+        <div class="row">
+          <div class="col-md-3 col-xs-12 product-card" *ngFor="let s1 of section_1; let i = index" cdkDrag>
+            <div class="card">
+              <div class="move-handle" cdkDragHandle>
+                <svg width="24px" fill="currentColor" viewBox="0 0 24 24" aria-labelledby="title">
+                  <title>Move</title>
+                  <path
+                    d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z">
+                  </path>
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                </svg>
+              </div>
+
+              <div class="delete-handle" (click)="section_1.splice(i, 1)">
+                <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                  role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>Remove</title>
+                  <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2"
+                    d="M6 10h52m-36 0V5.9A3.9 3.9 0 0 1 25.9 2h12.2A3.9 3.9 0 0 1 42 5.9V10m10.5 0l-2.9 47.1a5 5 0 0 1-4.9 4.9H19.3a5 5 0 0 1-4.9-4.9L11.5 10"
+                    stroke-linejoin="round" stroke-linecap="round"></path>
+                  <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2"
+                    d="M32 18v36M22 18l2 36m18-36l-2 36" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </div>
+
+              <img class="card-img-top" [src]="s1.mainImage[0]?.location">
+              <div class="card-body">
+                <p class="card-text">{{s1.title | slice:0:15}}{{ s1.title.length > 15 ? '...' : ''}}</p>
+                <div class="price-sec">
+                  <div class="main-price">₹{{s1.price}}</div>
+                  <div class="old-price">₹1,548</div>
+                  <div class="off-price"><span>78% off</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-xs-12 product-card product-card-demo" *ngFor="let s11 of fakeArray(4 - section_1.length)">
+            <div class="card">
+              <img class="card-img-top" [src]="demoPic | demoPicture">
+              <div class="card-body">
+                <p class="card-text">Product title</p>
+                <div class="price-sec">
+                  <div class="main-price">₹750</div>
+                  <div class="old-price">₹1,500</div>
+                  <div class="off-price"><span>50% off</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </cdk-drop>
+
+      <app-edit-input [data]='section2_title' (focusOut)='setSection2Title($event)'></app-edit-input>
+      <!-- <h3 class="text-center pt-3">Special Discount</h3> -->
+      <cdk-drop #sectionTwo [data]="section2" orientation="horizontal" [connectedTo]="[productList]"
+        (dropped)="drop($event)">
+        <div class="row">
+          <div class="col-md-3 col-xs-12 product-card" *ngFor="let s2 of section2; let i = index" cdkDrag>
+            <div class="card">
+              <div class="move-handle" cdkDragHandle>
+                <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z">
+                  </path>
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                </svg>
+              </div>
+
+              <div class="delete-handle" (click)="section2.splice(i, 1)">
+                <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                  role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>Remove</title>
+                  <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2"
+                    d="M6 10h52m-36 0V5.9A3.9 3.9 0 0 1 25.9 2h12.2A3.9 3.9 0 0 1 42 5.9V10m10.5 0l-2.9 47.1a5 5 0 0 1-4.9 4.9H19.3a5 5 0 0 1-4.9-4.9L11.5 10"
+                    stroke-linejoin="round" stroke-linecap="round"></path>
+                  <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2"
+                    d="M32 18v36M22 18l2 36m18-36l-2 36" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </div>
+
+              <img class="card-img-top" [src]="s2.mainImage[0]?.location">
+              <div class="card-body">
+                <p class="card-text">{{s2.title | slice:0:15}}{{ s2.title.length > 15 ? '...' : ''}}</p>
+                <div class="price-sec">
+                  <div class="main-price">₹{{s2.price}}</div>
+                  <div class="old-price">₹1,548</div>
+                  <div class="off-price"><span>78% off</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 product-card product-card-demo" *ngFor="let s11 of fakeArray(4 - section2.length)">
+            <div class="card">
+              <img class="card-img-top" [src]="demoPic | demoPicture">
+              <div class="card-body">
+                <p class="card-text">Product title</p>
+                <div class="price-sec">
+                  <div class="main-price">₹750</div>
+                  <div class="old-price">₹1,500</div>
+                  <div class="off-price"><span>50% off</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </cdk-drop>
+
+      <div style="text-align: center;">
+        <img style="width: 90%;" src="https://img.lovepik.com//back_pic/05/81/72/665c3a00fe4a0e2.jpg_wh860.jpg" alt="">
+      </div>
+
+      <app-edit-input [data]='section3_title' (focusOut)='setSection3Title($event)'></app-edit-input>
+      <!-- <h3 class="text-center pt-3">Top Deals On Fashion</h3> -->
+      <cdk-drop #sectionThree [data]="section3" orientation="horizontal" [connectedTo]="[productList]"
+        (dropped)="drop($event)">
+        <div class="row">
+          <div class="col-md-3 col-xs-12 product-card" *ngFor="let s3 of section3; let i = index" cdkDrag>
+            <div class="card">
+              <div class="move-handle" cdkDragHandle>
+                <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z">
+                  </path>
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                </svg>
+              </div>
+
+              <div class="delete-handle" (click)="section3.splice(i, 1)">
+                <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                  role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>Remove</title>
+                  <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2"
+                    d="M6 10h52m-36 0V5.9A3.9 3.9 0 0 1 25.9 2h12.2A3.9 3.9 0 0 1 42 5.9V10m10.5 0l-2.9 47.1a5 5 0 0 1-4.9 4.9H19.3a5 5 0 0 1-4.9-4.9L11.5 10"
+                    stroke-linejoin="round" stroke-linecap="round"></path>
+                  <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2"
+                    d="M32 18v36M22 18l2 36m18-36l-2 36" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </div>
+
+              <img class="card-img-top" [src]="s3.mainImage[0]?.location">
+              <div class="card-body">
+                <p class="card-text">{{s3.title | slice:0:15}}{{ s3.title.length > 15 ? '...' : ''}}</p>
+                <div class="price-sec">
+                  <div class="main-price">₹{{s3.price}}</div>
+                  <div class="old-price">₹1,548</div>
+                  <div class="off-price"><span>78% off</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 product-card product-card-demo" *ngFor="let s11 of fakeArray(4 - section3.length)">
+            <div class="card">
+              <img class="card-img-top" [src]="demoPic | demoPicture">
+              <div class="card-body">
+                <p class="card-text">Product title</p>
+                <div class="price-sec">
+                  <div class="main-price">₹750</div>
+                  <div class="old-price">₹1,500</div>
+                  <div class="off-price"><span>50% off</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </cdk-drop>
+
+    </div>
+
+    <div class="col-md-3 col-xs-12" *ngIf="pannelmenu">
+      <div class="top-button">
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-success btn-sm" (click)="saveConfig()">Save</button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-info btn-sm" style="float: right;">Preview</button>
+          </div>
+        </div>
+      </div>
+      <mat-accordion>
+        <mat-expansion-panel expanded="0" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header class="products-section-header">
+            <mat-panel-title>
+              All Products
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <input type="text" [(ngModel)]="filterQuery" placeholder="Search by product"
+            class="form-control product-search" />
+
+          <cdk-virtual-scroll-viewport [itemSize]="18 * 18" class="example-viewport">
+            <cdk-drop #productList [data]="allProductsData | dataFilter : filterQuery"
+              [connectedTo]="[sectionOne, sectionTwo, sectionThree]">
+              <div class="card all-products-card" *ngFor="let p of allProductsData | dataFilter : filterQuery" cdkDrag
+                [id]="p.title">
+                <img class="card-img-top" [src]="p.mainImage[0]?.location" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">{{p.title}}</p>
+                  <div class="price-sec">
+                    <div class="main-price">₹{{p.price}}</div>
+                    <div class="old-price">₹1,548</div>
+                    <div class="off-price"><span>78% off</span></div>
+                  </div>
+                </div>
+              </div>
+            </cdk-drop>
+          </cdk-virtual-scroll-viewport>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+  </div>
+</div>

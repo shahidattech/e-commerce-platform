@@ -1,0 +1,382 @@
+<div class="article_part_form">
+    <div class="col-lg-12">
+        <h3>Account and Store Settingd</h3>
+    </div>
+
+    <form name="profileForm" method="post" en [formGroup]="profileForm">
+        <div class="col-lg-8  pull-left">
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default">
+                    <div class="card-header">
+                        Account details
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Title<span class="asstrick">*</span></label>
+                            <!-- <label class="ng-tns-c9-1">Full Name: </label> -->
+                            <input type="text" formControlName="fullName" readonly [value]=profileForm.fullName
+                                [ngClass]="{
+                                'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Account Email:</label>
+                            <input type="text" formControlName="accountEmail" readonly [value]=profileForm.accountEmail
+                                [ngClass]="{
+                                'form-control': true}">
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default file_upload_system">
+                    <div class="card-header">
+                        Brand Details
+                    </div>
+                    <div class="card-body">
+
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Logo Image<span class="asstrick">*</span><span
+                                    class="gray_content">(max 1063 x 709)</span></label>
+                                    <img [src]='imageLogo' alt="pic" width="30"  *ngIf="imageLogo">
+                            <p>This image will be on displayed awebsiteURLs Logo on your Website: <b>png gif jpg jpeg</b>.)
+                            </p>
+                            <input type="file" id="file" (change)="getFileDetails($event)">
+                            <input type="hidden" name="fileHidden" formControlName="imageLogo" />
+                            <p *ngIf="file" class="pl-4 align-middle mb-0">{{file.name}}</p>
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Website URL (like mongodbname.com): </label>
+                            <input type="text" formControlName="websiteURL" [value]=profileForm.websiteURL [ngClass]="{
+                                'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Facebook URL: </label>
+                            <input type="text" formControlName="facebookUrl" [value]=profileForm.facebookUrl [ngClass]="{
+                                'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Brand Name: </label>
+                            <input type="text" formControlName="brandName" [value]=profileForm.brandName [ngClass]="{
+                                'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Instagram URL </label>
+                            <input type="text" formControlName="instagramUrl" [value]=profileForm.instagramUrl [ngClass]="{
+                                'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Twitter URL </label>
+                            <input type="text" formControlName="twitterUrl" [value]=profileForm.twitterUrl [ngClass]="{
+                                'form-control': true}">
+                        </fieldset>
+                        
+                        <fieldset>
+                            <label>Theme <span class="gray_content"></span></label>
+                            <select formControlName="themeOption" class="form-control">
+                                <option *ngFor="let theme of themeOptions">{{theme}}</option>
+                            </select>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default file_upload_system">
+                    <div class="card-header">
+                        Payment Collection Information<br>
+                    </div>
+                    
+                    <div class="card-body">
+                        <fieldset>
+                            <label>Allow COD? <span class="asstrick">*</span></label>
+                            <select formControlName="enableForCOD" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let mode of paymentMode" [value]="mode">{{mode}}</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label>Allow Online Payment? <span class="asstrick">*</span> </label>
+                            <select formControlName="enableForOnlinePayment" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let mode of paymentMode" [value]="mode">{{mode}}</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset>
+                            <label>Collect Shipping Charges from Customer? <span class="asstrick">*</span> </label>
+                            <select formControlName="enableForShippingChargesCollect" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let option of enableForShippingChargesCollectOptions" [value]="option">{{option}}</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label>Online Payment Method? <span class="asstrick">*</span> </label>
+                            <select formControlName="onlinePaymentMethod" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option value="payUmoney">payUmoney</option>
+                                <option value="RazorPay">RazorPay</option>
+                            </select>
+                        </fieldset>
+                        <div class="card-header" [hidden]="profileForm.value.onlinePaymentMethod != 'payUmoney'">
+                            Payment Collection Through Google PayPayumoney Payement Gateway <br>
+                        </div>
+                        <fieldset [hidden]="profileForm.value.onlinePaymentMethod != 'payUmoney'">
+                            <label class="ng-tns-c9-1">PayuMoney Key<span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="payUMerchantKey" [value]=profileForm.payUMerchantKey
+                            [ngClass]="{
+                                'form-control': true,'is-invalid': profileForm.controls.payUMerchantKey.invalid && profileForm.controls.payUMerchantKey.touched,
+                        'is-valid': profileForm.controls.payUMerchantKey.valid}" />
+                            <small id="fnHelp"
+                                *ngIf="profileForm.controls.payUMerchantKey.errors?.required && profileForm.controls.payUMerchantKey.touched"
+                                class="form-text custom-invalid-feedback">Please fill the payUMerchantKey
+                            </small>
+                            <small id="fnHelp"
+                                *ngIf="profileForm.controls.payUMerchantKey.errors?.minlength && profileForm.controls.payUMerchantKey.touched"
+                                class="form-text custom-invalid-feedback">Value must contain atleast some characters
+                            </small>
+                        </fieldset>
+                        <fieldset [hidden]="profileForm.value.onlinePaymentMethod != 'payUmoney'"> 
+                            <label class="ng-tns-c9-1">PayuMoney Salt:<span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="payUMerchantSalt" [value]=profileForm.payUMerchantSalt
+                            [ngClass]="{
+                                'form-control': true,'is-invalid': profileForm.controls.payUMerchantSalt.invalid && profileForm.controls.payUMerchantSalt.touched,
+                        'is-valid': profileForm.controls.payUMerchantSalt.valid}" />
+                            <small id="fnHelp"
+                                *ngIf="profileForm.controls.payUMerchantSalt.errors?.required && profileForm.controls.payUMerchantSalt.touched"
+                                class="form-text custom-invalid-feedback">Please fill the payUMerchantSalt
+                            </small>
+                            <small id="fnHelp"
+                                *ngIf="profileForm.controls.payUMerchantSalt.errors?.minlength && profileForm.controls.payUMerchantSalt.touched"
+                                class="form-text custom-invalid-feedback">Value must contain atleast some characters in payUMerchantSalt
+                            </small>
+                        </fieldset>
+                        <fieldset [hidden]="profileForm.value.onlinePaymentMethod != 'payUmoney'">
+                            <label class="ng-tns-c9-1">PayuMoney Header <span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="payUMerchantHeader" [value]=profileForm.payUMerchantHeader
+                              [ngClass]="{
+                                    'form-control': true,'is-invalid': profileForm.controls.payUMerchantHeader.invalid && profileForm.controls.payUMerchantHeader.touched,
+                            'is-valid': profileForm.controls.payUMerchantHeader.valid}" />
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.payUMerchantHeader.errors?.required && profileForm.controls.payUMerchantHeader.touched"
+                                    class="form-text custom-invalid-feedback">Please fill the payUMerchantHeader
+                                </small>
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.payUMerchantHeader.errors?.minlength && profileForm.controls.payUMerchantHeader.touched"
+                                    class="form-text custom-invalid-feedback">Value must contain atleast some characters in payUMerchantHeader
+                                </small>
+                        </fieldset>
+                        <div class="card-header" [hidden]="profileForm.value.onlinePaymentMethod != 'RazorPay'">
+                            Payment Collection Through Google Razorpay Payement Gateway <br>
+                        </div>
+                        <fieldset [hidden]="profileForm.value.onlinePaymentMethod != 'RazorPay'">
+                            <label class="ng-tns-c9-1">key_id <span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="key_id" [value]=profileForm.key_id
+                              [ngClass]="{
+                                    'form-control': true,'is-invalid': profileForm.controls.key_id.invalid && profileForm.controls.key_id.touched,
+                            'is-valid': profileForm.controls.key_id.valid}" />
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.key_id.errors?.required && profileForm.controls.key_id.touched"
+                                    class="form-text custom-invalid-feedback">Please fill the key_id
+                                </small>
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.key_id.errors?.minlength && profileForm.controls.key_id.touched"
+                                    class="form-text custom-invalid-feedback">Value must contain atleast some characters in key_id
+                                </small>
+                        </fieldset>
+
+                        <fieldset [hidden]="profileForm.value.onlinePaymentMethod != 'RazorPay'">
+                            <label class="ng-tns-c9-1">key_secret <span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="key_secret" [value]=profileForm.key_secret
+                              [ngClass]="{
+                                    'form-control': true,'is-invalid': profileForm.controls.key_secret.invalid && profileForm.controls.key_secret.touched,
+                            'is-valid': profileForm.controls.key_secret.valid}" />
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.key_secret.errors?.required && profileForm.controls.key_secret.touched"
+                                    class="form-text custom-invalid-feedback">Please fill the key_secret
+                                </small>
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.key_secret.errors?.minlength && profileForm.controls.key_secret.touched"
+                                    class="form-text custom-invalid-feedback">Value must contain atleast some characters in key_secret
+                                </small>
+                        </fieldset>
+                        
+                        <div class="card-header">
+                            Payment Collection Through UPI (Google Pay, PhonePay, Paytm, BHIM, AmazonPay) <br>
+                        </div>
+                        <fieldset>
+
+                            <label class="ng-tns-c9-1">Enter your UPI ID </label>
+                            <input type="text" formControlName="googlePayNo" [value]=profileForm.googlePayNo 
+                             [ngClass]="{
+                                    'form-control': true,'is-invalid': profileForm.controls.googlePayNo.invalid && profileForm.controls.googlePayNo.touched,
+                            'is-valid': profileForm.controls.googlePayNo.valid}" />
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.googlePayNo.errors?.required && profileForm.controls.googlePayNo.touched"
+                                    class="form-text custom-invalid-feedback">Please fill the UPI ID
+                                </small>
+                                <small id="fnHelp"
+                                    *ngIf="profileForm.controls.googlePayNo.errors?.minlength && profileForm.controls.googlePayNo.touched"
+                                    class="form-text custom-invalid-feedback">Value must be a valid UPI ID
+                                </small>
+
+                                <div hidden="ture">
+                                <div class="card-header">
+                                    Payment Collection Through PhonePay <br>
+                                </div>
+                                <label class="ng-tns-c9-1">PhonePay No. </label>
+                                <input type="text" formControlName="phonePayNo" [value]=profileForm.phonePayNo
+                                  [ngClass]="{
+                                        'form-control': true,'is-invalid': profileForm.controls.phonePayNo.invalid && profileForm.controls.phonePayNo.touched,
+                                'is-valid': profileForm.controls.phonePayNo.valid}" />
+                                    <small id="fnHelp"
+                                        *ngIf="profileForm.controls.phonePayNo.errors?.required && profileForm.controls.phonePayNo.touched"
+                                        class="form-text custom-invalid-feedback">Please fill the phonePayNo
+                                    </small>
+                                    <small id="fnHelp"
+                                        *ngIf="profileForm.controls.phonePayNo.errors?.minlength && profileForm.controls.phonePayNo.touched"
+                                        class="form-text custom-invalid-feedback">Value must contain atleast some characters in phonePayNo
+                                    </small>
+
+                                    <div class="card-header">
+                                        Payment Collection Through Paytm <br>
+                                    </div>
+                                    <label class="ng-tns-c9-1">Paytm No. </label>
+                                    <input type="text" formControlName="paytmNo"
+                                        [value]=profileForm.paytmNo  [ngClass]="{
+                                            'form-control': true,'is-invalid': profileForm.controls.paytmNo.invalid && profileForm.controls.paytmNo.touched,
+                                    'is-valid': profileForm.controls.paytmNo.valid}" />
+                                        <small id="fnHelp"
+                                            *ngIf="profileForm.controls.paytmNo.errors?.required && profileForm.controls.paytmNo.touched"
+                                            class="form-text custom-invalid-feedback">Please fill the paytmNo
+                                        </small>
+                                        <small id="fnHelp"
+                                            *ngIf="profileForm.controls.paytmNo.errors?.minlength && profileForm.controls.paytmNo.touched"
+                                            class="form-text custom-invalid-feedback">Value must contain atleast some characters in paytmNo
+                                        </small>
+                                    </div>
+                        </fieldset>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default file_upload_system">
+                    <div class="card-header">
+                        Set Notification preferences.<br>
+                    </div>
+                    
+                    <div class="card-body">
+                        <fieldset>
+                            <label>Email Notification On Order Placement? <span class="asstrick">*</span></label>
+                            <select formControlName="enableForEmailNotificationonOrder" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let option of enableForEmailNotificationonOrderOptions" [value]="option">{{option}}</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label>SMS Notification for Order Placement? <span class="asstrick">*</span> </label>
+                            <select formControlName="enableForSMSNotificationonOrder" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let option of enableForSMSNotificationonOrderoptions" [value]="option">{{option}}</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label>Notification for Order Displatch? <span class="asstrick">*</span> </label>
+                            <select formControlName="enableForSMSNotificationonDispatch" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let option of enableForSMSNotificationonDispatchoptions" [value]="option">{{option}}</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default file_upload_system">
+                    <div class="card-header">
+                        Contact & other  Details(Registration No if Any.)
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Phone Number(for your Customer):<span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="phoneNumber" [value]=profileForm.phoneNumber
+                                [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">WhatsApp (for your Customer ):<span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="whatsApp" [value]=profileForm.whatsApp
+                                [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Email (for your Customer ):<span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="email" [value]=profileForm.email
+                                [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <div class="card-header">
+                            Address Information (To be used in Invoice as well)<br>
+                        </div>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">PIN Code.</label>
+                            <input type="text" formControlName="pinCode"
+                                [value]=profileForm.pinCode [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">State.</label>
+                            <input type="text" formControlName="state"
+                                [value]=profileForm.state [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Address.</label>
+                            <input type="text" formControlName="storePhysicalAddress"
+                                [value]=profileForm.storePhysicalAddress [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">GSTIN.</label>
+                            <input type="text" formControlName="gstNo"
+                                [value]=profileForm.gstNo [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">PAN No.</label>
+                            <input type="text" formControlName="panNo"
+                                [value]=profileForm.panNo [ngClass]="{'form-control': true}">
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">CIN.</label>
+                            <input type="text" formControlName="cin"
+                                [value]=profileForm.cin [ngClass]="{'form-control': true}">
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default file_upload_system">
+                    <div class="card-header">
+                        Website content
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <label class="ng-tns-c9-1">About Us:<span class="asstrick">*</span> </label>
+                            <textarea type="text" formControlName="aboutUs" style="min-height: 150px;"
+                                [ngClass]="{'form-control': true}"></textarea>
+                        </fieldset>
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Header Color: (Hex color. example: #FF9F33) <a href="https://htmlcolorcodes.com" target="_blank">Click here</a> <span class="asstrick">*</span> </label>
+                            <input type="text" formControlName="headerColor" placeholder="example: #FF9F33"
+                                [ngClass]="{'form-control': true}">
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 row submit_button">
+            
+            <button type="button" (click)="submitForm()" class="btn btn-primary" >Save <i
+                    class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+
+        </div>
+    </form>
+</div>

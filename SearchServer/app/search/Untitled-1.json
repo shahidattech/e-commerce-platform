@@ -1,0 +1,144 @@
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "60600cec5c04a44c50b91d7d",
+    "_score": 1.9748795,
+    "_source": {
+        "doc": {
+            "_id": "60600cec5c04a44c50b91d7d",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "prod2",
+            "short_title": "prod2",
+            "main_category": "Baby & Kids",
+            "sub_category": "Baby Care",
+            "sub_sub_category": "Diapers",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616907500598_xl-rc24rodengrey-roden-original-imafwyfbmydqdvht.jpeg"
+        }
+    }
+},
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "606019f35c04a44c50b91d9b",
+    "_score": 1.0170846,
+    "_source": {
+        "doc": {
+            "_id": "606019f35c04a44c50b91d9b",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "prod2",
+            "short_title": "prod2",
+            "main_category": "Baby & Kids",
+            "sub_category": "Baby Care",
+            "sub_sub_category": "Diapers",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616910835568_3xl-rc74solidyellow-roden-original-imafvtq6ga7xfnyj.jpeg"
+        }
+    }
+},
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "60601b925c04a44c50b91d9f",
+    "_score": 0.39103588,
+    "_source": {
+        "doc": {
+            "_id": "60601b925c04a44c50b91d9f",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "prod1",
+            "short_title": "prod1",
+            "main_category": "",
+            "sub_category": "",
+            "sub_sub_category": "",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616911250470_3xl-rc74solidyellow-roden-original-imafvtq6ga7xfnyj.jpeg"
+        }
+    }
+},
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "60601be85c04a44c50b91da5",
+    "_score": 0.3785077,
+    "_source": {
+        "doc": {
+            "_id": "60601be85c04a44c50b91da5",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "prod3",
+            "short_title": "prod3",
+            "main_category": "Baby & Kids",
+            "sub_category": "Baby Care",
+            "sub_sub_category": "Diapers",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616911337236_free-hkchiku6006-aanzia-unstitched-original-imafuhhfb7ngnhgr.jpeg"
+        }
+    }
+},
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "605dec52d9cd09e03da521a3",
+    "_score": 0.31599444,
+    "_source": {
+        "doc": {
+            "_id": "605dec52d9cd09e03da521a3",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "testedelete6",
+            "short_title": "testedelete6",
+            "main_category": "Baby & Kids",
+            "sub_category": "Baby Care",
+            "sub_sub_category": "Diapers",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616768082888_s-a-j-001-pink-yesly-original-imagy6j2et3pxa4h.jpeg"
+        }
+    }
+},
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "60600e275c04a44c50b91d8e",
+    "_score": 0.31599444,
+    "_source": {
+        "doc": {
+            "_id": "60600e275c04a44c50b91d8e",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "prod2prod2prod2prod2",
+            "short_title": "prod2prod2",
+            "main_category": "Cakes",
+            "sub_category": "Britonnia Cake",
+            "sub_sub_category": "",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616907815463_xl-rc24rodengrey-roden-original-imafwyfbmydqdvht.jpeg"
+        }
+    }
+},
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "6060197c5c04a44c50b91d97",
+    "_score": 0.31599444,
+    "_source": {
+        "doc": {
+            "_id": "6060197c5c04a44c50b91d97",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "prod1",
+            "short_title": "prod1",
+            "main_category": "Baby & Kids",
+            "sub_category": "Baby Care",
+            "sub_sub_category": "Diapers",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616910717065_l-rc24rodengrey-roden-original-imafpjnbgfqht5rr.jpeg"
+        }
+    }
+},
+{
+    "_index": "productindex",
+    "_type": "productModelDocument",
+    "_id": "605ff9ca3feecf4058ea602e",
+    "_score": 0.25427115,
+    "_source": {
+        "doc": {
+            "_id": "605ff9ca3feecf4058ea602e",
+            "createrId": "605750ba0e9f3e282942f61d",
+            "title": "testdeleteptoducttestdeleteptoducttestdeleteptoduct",
+            "short_title": "testdeleteptoducttestdeleteptoduct",
+            "main_category": "Beauty & Hygiene",
+            "sub_category": "Body Care",
+            "sub_sub_category": "Soap",
+            "mainImage": "https://mybrand-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616902602893_m-maw19cn033b-metronaut-original-imafvzs6ejy5wvbv.jpeg"
+        }
+    }
+}

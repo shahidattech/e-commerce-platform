@@ -1,0 +1,471 @@
+<div [@routerTransition] class="article_part_form">
+    <div class="col-lg-12">
+        <h3>Create Product</h3>
+    </div>
+
+    <form name="productForm" method="post" en [formGroup]="productForm">
+
+        <div class="col-lg-8  pull-left">
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default">
+                    <div class="card-header">
+                        Product details
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+
+                            <label class="ng-tns-c9-1">Title<span class="asstrick">*</span></label>
+                            <input type="text" formControlName="title" [ngClass]="{
+                      'form-control': true,'is-invalid': productForm.controls.title.invalid && productForm.controls.title.touched,
+              'is-valid': productForm.controls.title.valid}" />
+                            <small id="fnHelp"
+                                *ngIf="productForm.controls.title.errors?.required && productForm.controls.title.touched"
+                                class="form-text custom-invalid-feedback">Please fill the titile
+                            </small>
+                            <small id="fnHelp"
+                                *ngIf="productForm.controls.title.errors?.minlength && productForm.controls.title.touched"
+                                class="form-text custom-invalid-feedback">Value must contain atleast 5 characters
+                            </small>
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Short Title<span class="asstrick">*</span> <span
+                                    class="gray_content">(Maximum: 180 characters) </span></label>
+                            <input type="text"
+                                [ngClass]="{'form-control': true, 'is-invalid': productForm.controls.short_title.invalid && productForm.controls.short_title.touched, 'is-valid': productForm.controls.short_title.valid}"
+                                formControlName="short_title" />
+                            <small id="fnHelp"
+                                *ngIf="productForm.controls.short_title.errors?.required && productForm.controls.short_title.touched"
+                                class="form-text custom-invalid-feedback">Please fill the short title
+                            </small>
+                            <small id="fnHelp"
+                                *ngIf="productForm.controls.short_title.errors?.maxlength && productForm.controls.short_title.touched"
+                                class="form-text custom-invalid-feedback">Maximum length of short title is 180
+                            </small>
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Description<span class="asstrick">*</span>
+                                <span class="gray_content">(Maximum: 2000 characters, Minimum: 5 characters)
+                                </span></label>
+                            <textarea
+                                [ngClass]="{'form-control': true, 'is-invalid': productForm.controls.description.invalid && productForm.controls.description.touched, 'is-valid': productForm.controls.description.valid}"
+                                formControlName="description" rows="8"></textarea>
+                            <small id="fnHelp"
+                                *ngIf="productForm.controls.description.errors?.required && productForm.controls.description.touched"
+                                class="form-text custom-invalid-feedback">Please fill the description
+                            </small>
+                            <small id="fnHelp"
+                                *ngIf="productForm.controls.description.errors?.maxlength && productForm.controls.description.touched"
+                                class="form-text custom-invalid-feedback">Maximum length of description is 2000
+                            </small>
+                        </fieldset>
+                        <!-- <fieldset>
+                            <label class="ng-tns-c9-1">Price(Numeric values only) <span
+                                    class="asstrick">*</span></label>
+                            <input type="number" class="form-control" formControlName="price" />
+                        </fieldset> -->
+                        <fieldset>
+                            <label class="ng-tns-c9-1">GST (%)</label>
+                            <input type="number" class="form-control" formControlName="gst" />
+                        </fieldset>
+                        <!-- <fieldset>
+                            <label class="ng-tns-c9-1">COD Available for this product? <span class="asstrick">*</span></label>
+                            <select formControlName="codOption" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let cod of codList" [value]="cod">{{cod}}</option>
+                            </select>
+                        </fieldset> -->
+                        <fieldset>
+                            <div class="col-lg-12 no-padding">
+                                <label class="ng-tns-c9-1">Tags<span class="gray_content">Separate tags with commas
+                                    </span></label>
+                                <div class="tagSelection">
+                                    <ng-select [items]="tagdata | async" bindLabel="tagName" [virtualScroll]="true"
+                                        formControlName="tags" [multiple]="true" [hideSelected]="true"
+                                        [loading]="tagloading" placeholder="Search Tags" [typeahead]="taginputs$">
+                                    </ng-select>
+
+                                </div>
+                                <div class="add-tag-button">
+                                    <button type="button" class="btn btn-primary" (click)="addTagModal(content)">Add
+                                        Tag
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Return Policy <span class="asstrick"></span></label>
+                            <input type="text" class="form-control" formControlName="return_policy" />
+                        </fieldset>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default">
+                    <div class="card-header">
+                        Select category
+                    </div>
+                    <div class="card-body" *ngIf="categories?.data">
+                        <label for="sel1">Category:</label>
+                        <select class="form-control" formControlName="main_category"
+                            (ngModelChange)="onCategorySelected()">
+                            <option selected disabled value="">Select one</option>
+                            <option *ngFor="let c of categories?.data | keyvalue; let i = index" [value]="c.key">
+                                {{c.key}}</option>
+                        </select>
+
+                        <label for="sel1">Sub Category:</label>
+                        <select class="form-control" formControlName="sub_category"
+                            (ngModelChange)="onSubCategorySelected()">
+                            <option selected disabled value="">Select one</option>
+                            <option *ngFor="let c of subCat | keyvalue; let i = index" [value]="c.key">{{c.key}}
+                            </option>
+                        </select>
+
+                        <label for="sel1">Sub Sub Category:</label>
+                        <select class="form-control" formControlName="sub_sub_category">
+                            <option selected disabled value="">Select one</option>
+                            <option *ngFor="let c of subSubCat | keyvalue; let i = index" [value]="c.value">{{c.value}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-12 no-padding">
+                <div class="card card-default">
+                    <div class="card-header">
+                        Select category
+                    </div>
+                    <div class="card-body">
+                        <div class="tabs" *ngIf="categories?.data">
+
+                            <div class="tab" *ngFor="let c of categories?.data | keyvalue; let i = index">
+                                <input type="radio" [id]="c.key" 
+                                    name="main_category" [value]="c.key" class="checked_visual_arts category_main"
+                                    (change)="clickCategory()" [checked]="i==0">
+                                <label [for]="c.key">
+                                    {{c.key}}
+                                </label>
+
+                                <div class="content">
+                                    <fieldset class="sub-channels">
+                                        <h3>Sub-Category</h3>
+                                        <ul class="list-inline product-chooser ">
+                                            <li *ngFor="let control of c.value | keyvalue; let i = index">
+                                                <input type="radio" [value]="control.key" name="sub_cat"
+                                                    (change)="clickSubCategory(control.key, control.value)"
+                                                    id="channels{{i}}{{control.key}}" style="display: unset;">
+                                                {{control.key}}
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                    <fieldset class="sub-channels" *ngIf="subsubCat.length > 0">
+                                        <h3>Sub-Sub-Category</h3>
+                                        <ul class="list-inline product-chooser">
+                                            <li *ngFor="let control of subsubCat; let i = index">
+                                                <input type="radio" name="sub_sub_cat" (change)="clickSubSubCategory(control)"
+                                                    id="sub{{i}}" style="display: unset;"> {{control}}
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+
+            <div class="card card-default mb-3">
+                <div class="card-header">
+                    Pricing Information
+                </div>
+                <fieldset class="col-lg-12 no-padding">
+                    <table class="table table-bordered" formGroupName="attributes">
+                        <thead>
+                            <tr>
+                                <th colspan="">Price & Weight</th>
+                                <th>Size(In Inches)</th>
+                                <th>Add more?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let group of addAttributesArray.controls; let i = index;" [formGroupName]="i">
+                                <td>
+                                    <label>Price (Numeric values only)</label>
+                                    <input class="form-control" type="number" formControlName="price"
+                                        (change)="get_attributes($event)" />
+
+                                    <label>Weight (Numeric values only)</label>
+                                    <input class="form-control" type="number" formControlName="weight" />
+                                    <label>Unit</label>
+                                    <select formControlName="unit" class="form-control">
+                                        <option value="grams">Grams</option>
+                                        <option value="kg">Kg</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label>Lenght</label>
+                                    <input class="form-control" type="text" formControlName="lenght" />
+                                    <label>Breadth</label>
+                                    <input class="form-control" type="text" formControlName="breadth" />
+                                    <label>Height</label>
+                                    <input class="form-control" type="text" formControlName="height" />
+                                </td>
+                                <td align="center" style="width: 150px; ">
+                                    <button class="btn btn-primary" style="margin-right:10px;margin-bottom:20px;"
+                                        (click)="addAttributes()"><i class="fa fa-plus"></i></button>
+                                    <button class="btn btn-danger" style="margin-right:10px;margin-bottom:20px;"
+                                        *ngIf="addAttributesArray.controls.length > 1" (click)="removeAttributes(i)"><i
+                                            class="fa fa-minus"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </div>
+
+
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default file_upload_system">
+                    <div class="card-header">
+                        Primary Images
+                    </div>
+                    <div class="card-body">
+
+                        <fieldset>
+                            <label class="ng-tns-c9-1">Primary Photograph<span class="asstrick">*</span><span
+                                    class="gray_content">(min height: 960px and min width: 800px)</span></label>
+                            <img [src]='uploadFiles' alt="Forest" style="width:150px" *ngIf="uploadFiles">
+                            <p>This image will be on displayes as primary image of the product: <b>png gif jpg
+                                    jpeg</b>.)
+                            </p>
+                            <input type="file" id="file" (change)="getFileDetails($event)">
+                            <input type="hidden" name="fileHidden" formControlName="main_img_uploader" />
+                            <p *ngIf="file" class="pl-4 align-middle mb-0">{{file.name}}</p>
+                        </fieldset>
+                        <fieldset *ngIf="have_mainImage" class="main_img">
+                            <img [src]="have_mainImage" alt="Primary Images">
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card card-default mb-3">
+                <div class="card-header">
+                    Additional Images (Others)
+                </div>
+                <fieldset class="col-lg-12 no-padding">
+                    <table class="table table-bordered" formGroupName="product_images">
+                        <thead>
+                            <tr>
+                                <th colspan="">
+                                    images
+                                </th>
+                                <th>Select sequence</th>
+                                <th>Add more?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let group of addProductImagesArray.controls; let i = index;"
+                                [formGroupName]="i">
+                                <td>
+                                    <label>Upload Photo (min height: 960px and min width: 800px)</label>
+                                    <img [src]='uploadedSideshowImage[i].location' alt="Forest" style="width:150px"
+                                        *ngIf="uploadedSideshowImage">
+                                    <p>This image will display as additional images: <b>png gif jpg jpeg</b>.)
+                                        <input class="form-control" type="file" formControlName="product_image"
+                                            (change)="get_product_images($event)" />
+                                </td>
+                                <td>
+                                    <select class="form-control" style="width: 100px; ">
+                                        <option>{{i}}</option>
+                                    </select>
+                                </td>
+                                <td align="center" style="width: 150px; ">
+                                    <button class="btn btn-primary" style="margin-right:10px;margin-bottom:20px;"
+                                        (click)="addProductImage()"><i class="fa fa-plus"></i></button>
+                                    <button class="btn btn-danger" style="margin-right:10px;margin-bottom:20px;"
+                                        *ngIf="addProductImagesArray.controls.length > 1"
+                                        (click)="removeProductImage(i)"><i class="fa fa-minus"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+                <fieldset *ngIf="have_otherImages">
+                    <fieldset *ngFor="let oimg of have_otherImages; let i = index" class="main_img">
+                        <img [src]="oimg.location" alt="Other Image">
+                        <button class="btn" (click)=removeOtherImage(i)>Delete</button>
+                    </fieldset>
+                </fieldset>
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 pull-left">
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default mb-3">
+                    <div class="card-header">
+                        Recommend products
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <p>Recommended products are automatically generated through tags. However, you can
+                                manually override this feature by selecting up to 3 products to display at the bottom of
+                                this product.
+                            </p>
+                            <p>Select Recommended products:</p>
+                            <ng-select [items]="relatedProductData | async" bindLabel="title"
+                                formControlName="relatedProducts" [multiple]="true" [hideSelected]="true"
+                                [loading]="relatedProductLoading" placeholder="Search Products"
+                                [typeahead]="relatedProductInputs$">
+                            </ng-select>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default mb-3">
+                    <div class="card-header">
+                        Recommend Slide show
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <p>Recommended slide show are automatically generated through tags. However, you can
+                                manually override this feature by selecting up to 3 products to display at the bottom of
+                                this product.
+                            </p>
+                            <p>Select Recommended Slide Show:</p>
+                            <ng-select [items]="relatedSlideShowData | async" bindLabel="title"
+                                formControlName="relatedSlideShows" [multiple]="true" [hideSelected]="true"
+                                [loading]="relatedSlideShowLoading" placeholder="Search Slide Show"
+                                [typeahead]="relatedSlideShowInputs$">
+                            </ng-select>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default mb-3">
+                    <div class="card-header">
+                        seo keywords
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <label>SEO Keywords(comma separated)<span class="gray_content">(200 characters
+                                    max)</span></label>
+
+                            <input type="text" formControlName="seo_keywords" class="form-control" />
+
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default mb-3">
+                    <div class="card-header">
+                        Product Details
+                    </div>
+                    <!-- <div class="card-body">
+                        <fieldset>
+                            <label>Size <span class="gray_content"></span></label>
+
+                            <input type="text" formControlName="size" class="form-control" />
+
+                        </fieldset>
+                    </div> -->
+                    <!-- <div class="card-body">
+                        <fieldset>
+                            <label>Weight(Must be in grams) <span class="asstrick" style="color:red;">*</span></label>
+
+                            <input type="text" formControlName="weight" class="form-control" />
+
+                        </fieldset>
+                    </div> -->
+
+                    <div class="card-body">
+                        <fieldset>
+                            <label>Color <span class="gray_content"></span></label>
+                            <select formControlName="colorOption" class="form-control">
+                                <option selected disabled value=''>Select an option</option>
+                                <option *ngFor="let color of colorList" [value]="color">{{color}}</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <label>In Stock count <span class="gray_content"></span></label>
+
+                            <input type="number" formControlName="stock" class="form-control" />
+
+                        </fieldset>
+                    </div>
+                    <!-- <div class="card-body">
+                        <fieldset>
+                            <label>Length <span class="gray_content"></span></label>
+
+                            <input type="text" formControlName="length" class="form-control" />
+
+                        </fieldset>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-12 no-padding">
+                <div class="card card-default mb-3">
+                    <div class="card-header">
+                        publishing options <label><span class="asstrick" style="color:red;">*</span></label>
+                    </div>
+                    <div class="card-body">
+                        <fieldset>
+                            <ul class="list-inline">
+                                <li>
+                                    <label><input type="radio" name="Published_option"
+                                            formControlName="Published_option" value="Published" /> Published</label>
+                                </li>
+                                <li>
+                                    <label><input type="radio" name="Published_option"
+                                            formControlName="Published_option" value="saveDrafts" /> Save as
+                                        draft</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 row submit_button">
+            <button type="button" (click)="submitForm()" class="btn btn-primary"
+                [disabled]="productForm.invalid || loading">Save <i class="fa fa-spinner fa-spin fa-fw"
+                    *ngIf="loading"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="preview()">Preview</button>
+
+        </div>
+
+    </form>
+</div>
+
+<ng-template #content let-modal>
+    <div>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Adding New Tag</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <label class="ng-tns-c9-1">Tag Name<span class="asstrick" style="color:red;">*</span></label>
+            <input type="text" class="form-control" [(ngModel)]='NewTag'>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="addTag()">Save</button>
+        </div>
+    </div>
+</ng-template>

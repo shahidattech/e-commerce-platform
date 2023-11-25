@@ -1,0 +1,55 @@
+<div class="article_part_form col-lg-12">
+  <div class="col-lg-12 no-padding">
+    <div class="card card-default">
+      <div class="card-header">
+        Slider List
+      </div>
+      <div class="card-body">
+        <div class="col-lg-12 no-padding row">
+        </div>
+        <form [formGroup]="user_activate" class="table-responsive">
+          <table class="table table-hover table-striped" [mfData]="data | dataFilter : filterQuery : title"
+            #mf="mfDataTable" [mfRowsOnPage]="5" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy"
+            [(mfSortOrder)]="sortOrder">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <mfDefaultSorter by="firstName">Image</mfDefaultSorter>
+                </th>
+                <th>Title</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">Edit/Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of mf.data">
+
+                <td><img *ngIf="item.image" [src]="item.image[0]?.location" width="30" />
+                </td>
+                <td>{{item.title}}</td>
+                <td>
+                  {{item.added_date| date: 'dd-MMM-yyyy'}}
+                </td>
+                <td>
+                  <button class="btn btn-primary" type="submit" (click)="onEdit(item)">Edit </button>
+                  <button class="btn btn-danger" style="margin-left:5px;" type="submit"
+                    (click)="deleteItem(item)">Delete </button>
+                </td>
+
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5" valign="text-right">
+                  <mfBootstrapPaginator style="float:right;"></mfBootstrapPaginator>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

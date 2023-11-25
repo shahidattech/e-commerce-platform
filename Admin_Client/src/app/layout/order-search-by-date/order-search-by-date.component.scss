@@ -1,0 +1,47 @@
+.table td, .table button{font-size:14px;padding: 0.5rem;    vertical-align: middle;}
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {padding: 1px 4px !important;
+    margin: 0 0.1em 0.1em 0 !important;}
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon {
+    color: rgba(255,255,255,0.54);
+    padding-right: 3px !important;
+}
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label {
+    font-size: 11px !important;
+    font-weight: normal !important;
+}
+.ng-value-label {font-size:12px;}
+
+ng-select.ng-invalid.ng-touched .ng-select-container {
+    border-color: #dc3545;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px #fde6e8;
+}
+.pagination,mfpaginator {float:right;}
+.search_icon {position:relative}
+.search_icon input{font-size:13px;height:37px; }
+.search_icon:after{position:absolute;content:'';    right: 21px;
+    top: 37px;background: url('../../../assets/images/search-icon.png');width:25px;height: 25px;}
+
+
+
+
+
+
+
+
+    .custom-day {
+        text-align: center;
+        padding: 0.185rem 0.25rem;
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+      }
+      .custom-day.focused {
+        background-color: #e6e6e6;
+      }
+      .custom-day.range, .custom-day:hover {
+        background-color: rgb(2, 117, 216);
+        color: white;
+      }
+      .custom-day.faded {
+        background-color: rgba(2, 117, 216, 0.5);
+      }

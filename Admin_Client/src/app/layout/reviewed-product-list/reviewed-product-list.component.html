@@ -1,0 +1,108 @@
+<div class="article_part_form col-lg-12">
+  <div class="col-lg-12 no-padding">
+    <div class="card card-default">
+      <div class="card-header">
+        Ratings & Reviews
+      </div>
+      <div class="card-body">
+        <div class="col-lg-12 no-padding row">
+          <!-- <div class="col-lg-4 pull-left">
+              <label class="col-xs-12 label-control">Sort by name or email id</label>
+              <select class="form-control input-sm" [(ngModel)]="sortBy">
+                  <option ngValue="">Sort by name or email id</option>
+                  <option ngValue="firstName">First name</option>
+                  <option ngValue="userName">Email</option>
+                  
+              </select>
+           </div>
+           <div class="col-lg-4 pull-left">
+              <label class="col-xs-12 label-control">Sort by order</label>
+              <select class="form-control input-sm" [(ngModel)]="sortOrder">
+                  <option ngValue="asc">Ascending</option>
+                  <option ngValue="desc">Descending</option>
+                  <option ngValue="badValue">Bad value</option>
+              </select>
+          </div> -->
+          <!-- <div class="col-lg-4 pull-left search_icon"> -->
+          <div class="col-lg-12 pull-left search_icon">
+            <label class="label-control">Search by Product Name</label>
+            <input type="text" [(ngModel)]="filterQuery" placeholder="Search by Product Name" class="form-control" />
+          </div>
+        </div>
+        <form [formGroup]="user_activate" class="table-responsive">
+          <table class="table table-hover table-striped" [mfData]="data | dataFilter : filterQuery : title"
+            #mf="mfDataTable" [mfRowsOnPage]="5" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy"
+            [(mfSortOrder)]="sortOrder">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <mfDefaultSorter by="picture">Primary Picture</mfDefaultSorter>
+                </th>
+                <th scope="col">
+                  <mfDefaultSorter by="firstName">Title</mfDefaultSorter>
+                </th>
+                <!-- <th scope="col">
+                  <mfDefaultSorter by="userName">Short Title</mfDefaultSorter>
+                </th> -->
+                <!-- <th>Published</th> -->
+                <th scope="col">
+                  <mfDefaultSorter by="userName">Ratings & Reviews</mfDefaultSorter>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of data">
+                <td>
+                  <img [src]="item.mainImage[0].location" alt="pic" width="30" *ngIf="item.mainImage">
+                </td>
+                <td>{{item.title}}</td>
+                <!-- <td>{{item.short_title}}</td> -->
+                <td>
+                  <div *ngIf="item.ratings_reviews">
+                    <div *ngFor="let r of item.ratings_reviews" class="card">
+                      <span>Reviewer: {{r.customerName}}</span>
+                      <span>Reviewer: {{r.added_date | date: 'dd-MMM-yyyy'}}</span>
+                      <span>Ratings: <i *ngFor="let i of [].constructor(r.rating)" class="fa fa-star"
+                          style="color:#14da1b"></i> </span>
+                      <p>Review: {{r.review}}
+                        <span *ngIf="r.isReviewApproved" class="badge badge-success mb-3">Approved</span>
+                      </p>
+                      <button *ngIf="!r.isReviewApproved" class="btn btn-primary mb-3" (click)="approve(r, item)">Approve</button>
+                      <br/>
+                    </div>
+                  </div>
+
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5" valign="text-right">
+                  <mfBootstrapPaginator style="float:right;"></mfBootstrapPaginator>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- <div class="row">
+  <div class="tagSelection col-lg-8">
+      <ng-select [items]="articledata | async"
+        bindLabel="title"
+        formControlName="articles"
+        [hideSelected]="true"
+        [loading]="articleloading"
+        placeholder="Search Tags"
+        [typeahead]="articleinputs$"
+       >
+    </ng-select>
+  </div>
+    <div class="add-tag-button col-lg-4">
+      <button type="button" class="btn btn-primary" (click)="addAritcle(user_activate.articles)">Add content</button>
+    </div>
+    </div> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

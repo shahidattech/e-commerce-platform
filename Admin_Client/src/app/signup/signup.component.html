@@ -1,0 +1,114 @@
+<div class="login-page" [@routerTransition]>
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <img  src="assets/images/logo.png" width="150px"/>
+      <h1>Manage your Website.</h1>
+      <form role="form" [formGroup]="registerForm">
+        <div class="form-content">
+          <div class="form-group text-left">
+            <input formControlName="firstName" type="text" class="form-control input-underline input-lg"
+              placeholder="Enter first name" [ngClass]="{
+                      'form-control': true,'is-invalid': firstName.invalid && firstName.touched,
+              'is-valid': firstName.valid}">
+            <small *ngIf="firstName.errors?.required && firstName.touched"
+              class="form-text custom-invalid-feedback">Please fill the first name</small>
+            <small *ngIf="firstName.errors?.minlength && firstName.touched"
+              class="form-text custom-invalid-feedback">Value must contain atleast 3 characters</small>
+          </div>
+          <div class="form-group text-left">
+            <input formControlName="lastName" type="text" class="form-control input-underline input-lg"
+              placeholder="Enter last name" [ngClass]="{
+                      'form-control': true,'is-invalid': lastName.invalid && lastName.touched,
+              'is-valid': lastName.valid}">
+            <small *ngIf="lastName.errors?.required && lastName.touched"
+              class="form-text custom-invalid-feedback">Please fill the Last name</small>
+            <small *ngIf="lastName.errors?.minlength && lastName.touched"
+              class="form-text custom-invalid-feedback">Value must contain atleast 3 characters</small>
+          </div>
+          <div class="form-group text-left">
+            <input formControlName="fullName" type="text" class="form-control input-underline input-lg"
+              placeholder="Enter your full name" [ngClass]="{
+                      'form-control': true,'is-invalid': fullName.invalid && fullName.touched,
+              'is-valid': fullName.valid}">
+            <small *ngIf="fullName.errors?.required && fullName.touched"
+              class="form-text custom-invalid-feedback">Please fill the Full name</small>
+            <small *ngIf="fullName.errors?.minlength && fullName.touched"
+              class="form-text custom-invalid-feedback">Value must contain atleast 3 characters</small>
+          </div>
+          <div class="form-group text-left">
+            <input formControlName="userName" type="email" class="form-control input-underline input-lg"
+              placeholder="Enter email" [ngClass]="{
+                      'form-control': true,'is-invalid': userName.invalid && userName.touched,
+              'is-valid': userName.valid}">
+            <small *ngIf="userName.errors?.required && userName.touched"
+              class="form-text custom-invalid-feedback">Please fill the Email id</small>
+            <small *ngIf="userName.errors?.email && userName.touched" class="form-text custom-invalid-feedback">Please
+              enter valid email id</small>
+          </div>
+          <div class="form-group text-left">
+            <input formControlName="phoneNo" type="text" maxlength="10" class="form-control input-underline input-lg"
+              placeholder="Enter phone number" [ngClass]="{
+                      'form-control': true,'is-invalid': phoneNo.invalid && phoneNo.touched,
+              'is-valid': phoneNo.valid}">
+            <small *ngIf="phoneNo.errors?.required && phoneNo.touched" class="form-text custom-invalid-feedback">Please
+              fill the Phone number</small>
+            <small *ngIf="phoneNo.errors?.minlength && phoneNo.touched" class="form-text custom-invalid-feedback">Phone
+              number must be 10 digit numbers</small>
+            <small class="form-text custom-invalid-feedback"
+              *ngIf="phoneNo.touched && phoneNo.invalid && phoneNo.errors.invalidNumber">
+              Only number allowed
+            </small>
+          </div>
+          <div class="form-group text-left">
+            <input formControlName="passwd" type="password" class="form-control input-underline input-lg"
+              placeholder="password " [ngClass]="{
+                      'form-control': true,'is-invalid': passwd.invalid && passwd.touched,
+              'is-valid': passwd.valid}">
+            <small *ngIf="passwd.errors?.required && passwd.touched" class="form-text custom-invalid-feedback">Please
+              fill the password</small>
+            <small *ngIf="passwd.errors?.minlength && passwd.touched" class="form-text custom-invalid-feedback">Value
+              must contain atleast 6 digits</small>
+          </div>
+          <div class="form-group text-left">
+            <input formControlName="passwd2" type="password" class="form-control input-underline input-lg"
+              placeholder="confirm password" [ngClass]="{
+                      'form-control': true,'is-invalid': passwd2.invalid && passwd2.touched,
+              'is-valid': passwd2.valid}">
+            <small *ngIf="passwd2.errors?.required && passwd2.touched" class="form-text custom-invalid-feedback">Please
+              fill the password</small>
+            <small *ngIf="passwd2.errors?.minlength && passwd2.touched" class="form-text custom-invalid-feedback">Value
+              must contain atleast 6 digits</small>
+            <small *ngIf="passwd2.errors?.compare && passwd2.touched" class="form-text custom-invalid-feedback">Confirm
+              password does not matched from your password</small>
+
+          </div>
+          <!-- <div class="form-group text-left">
+            <label class="radio-inline" style="margin-right:10px;">
+              <input type="radio" #active formControlName="userRole" (change)="0" value="admin"> Admin
+            </label>
+
+            <label class="radio-inline">
+              <input type="radio" formControlName="userRole" value="user"> User
+            </label>
+            <div class="col-lg-12 no-padding" *ngIf="active.checked">
+              <label>
+                <input type="checkbox" formControlName="active" checked="checked">
+                Please check to the checkbox
+              </label>
+            </div>
+          </div> -->
+          <div class="form-group" style="text-align:center;">
+            <button type="button" [disabled]="registerForm.invalid || loading" class="btn rounded-btn"
+              (click)="register()">Register</button>
+
+            <button type="button" class="btn btn-link" (click)="moveToLogin()">Log in</button>
+
+            <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium" color="#fff" type="ball-clip-rotate">
+            </ngx-spinner>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

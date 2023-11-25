@@ -1,0 +1,102 @@
+<div class="article_part_form col-lg-12">
+    <div class="col-lg-12 no-padding">
+        <div class="card card-default">
+            <div class="card-header">
+                Get Slide Show
+            </div>
+            <div class="card-body">
+                <div class="col-lg-12 no-padding row">
+                    <div class="col-lg-4 pull-left">
+                        <label class="col-xs-12 label-control">Sort by name or email id</label>
+                        <select class="form-control input-sm" [(ngModel)]="sortBy">
+                            <option ngValue="">Sort by name or email id</option>
+                            <option ngValue="firstName">First name</option>
+                            <option ngValue="userName">Email</option>
+
+                        </select>
+                    </div>
+                    <div class="col-lg-4 pull-left">
+                        <label class="col-xs-12 label-control">Sort by order</label>
+                        <select class="form-control input-sm" [(ngModel)]="sortOrder">
+                            <option ngValue="asc">Ascending</option>
+                            <option ngValue="desc">Descending</option>
+                            <option ngValue="badValue">Bad value</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 pull-left search_icon">
+                        <label class="label-control">Search by Email id</label>
+                        <input type="text" [(ngModel)]="filterQuery" placeholder="Search by Email id"
+                               class="form-control"/>
+                        <!--  <img class="user-avatar" src="assets/images/logo.png" width="150px" /> -->
+                    </div>
+                </div>
+                <form [formGroup]="user_activate">
+                    <table class="table table-hover table-striped" [mfData]="data | dataFilter : filterQuery : title"
+                           #mf="mfDataTable" [mfRowsOnPage]="5" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy"
+                           [(mfSortOrder)]="sortOrder">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+                                <mfDefaultSorter by="firstName">Title</mfDefaultSorter>
+                            </th>
+
+
+                            <th scope="col">
+                                <mfDefaultSorter by="userName">Artist Name</mfDefaultSorter>
+                            </th>
+                            <th>Author Name</th>
+                            <th scope="col">Created Date</th>
+                            <th scope="col">Edit/Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of mf.data">
+
+                            <td>{{item.title}}</td>
+                            <td>{{item.ReferenceArtist[0]?.artistName}}</td>
+                            <td>
+                                {{item.author_article[0]?.fullName}}
+                            </td>
+                            <td>
+                                {{item.added_date| date: 'dd-MMM-yyyy'}}
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" type="submit" (click)="onEdit(item)">Edit</button>
+                                <button class="btn btn-danger" style="margin-left:5px;" type="submit"
+                                        (click)="deleteItem(item)">Delete
+                                </button>
+                            </td>
+
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5" valign="text-right">
+                                <mfBootstrapPaginator style="float:right;"></mfBootstrapPaginator>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                    <!-- <div class="row">
+                     <div class="tagSelection col-lg-8">
+                         <ng-select [items]="articledata | async"
+                           bindLabel="title"
+                           formControlName="articles"
+                           [hideSelected]="true"
+                           [loading]="articleloading"
+                           placeholder="Search Tags"
+                           [typeahead]="articleinputs$"
+                          >
+                       </ng-select>
+                     </div>
+                       <div class="add-tag-button col-lg-4">
+                         <button type="button" class="btn btn-primary" (click)="addAritcle(user_activate.articles)">Add content</button>
+                       </div>
+                       </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

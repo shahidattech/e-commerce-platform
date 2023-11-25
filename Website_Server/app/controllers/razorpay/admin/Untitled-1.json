@@ -1,0 +1,300 @@
+{
+    "_id" : "605750ba0e9f3e282942f61d",
+    "customers" : [ 
+        {
+            "_id" : ObjectId("60579991b76d633ffc342a1d"),
+            "customerId" : "104409112508154110652",
+            "orders" : [ 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("60579991b76d633ffc342a1e"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("60579991b76d633ffc342a1f"),
+                                "productId" : "605751ae0e9f3e282942f627",
+                                "quantity" : 2,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335278458_images.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle2"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-21T19:08:01.407Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("605799f7b76d633ffc342a20"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("605799f7b76d633ffc342a21"),
+                                "productId" : "605751ae0e9f3e282942f627",
+                                "quantity" : 2,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335278458_images.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle2"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-21T19:09:43.760Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("6057bfbcfcc849233cfd75d8"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("6057bfbcfcc849233cfd75d9"),
+                                "productId" : "6057513b0e9f3e282942f61f",
+                                "quantity" : 1,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335163484_download%20%281%29.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-21T21:50:52.122Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("605835f3618dd83920abb459"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("605835f3618dd83920abb45a"),
+                                "productId" : "6057513b0e9f3e282942f61f",
+                                "quantity" : 1,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335163484_download%20%281%29.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-22T06:15:15.158Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("605836e7031caf3d7c29bd54"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("605836e7031caf3d7c29bd55"),
+                                "productId" : "6057513b0e9f3e282942f61f",
+                                "quantity" : 1,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335163484_download%20%281%29.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-22T06:19:19.412Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("6058377a96bdc3099c8c7908"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("6058377a96bdc3099c8c7909"),
+                                "productId" : "6057513b0e9f3e282942f61f",
+                                "quantity" : 1,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335163484_download%20%281%29.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-22T06:21:46.202Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("60583b66747a4c4500b6ed7a"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("60583b66747a4c4500b6ed7b"),
+                                "productId" : "6057513b0e9f3e282942f61f",
+                                "quantity" : 1,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335163484_download%20%281%29.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-22T06:38:30.121Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("605846b1b6bec81f1ce19f6a"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("605846b1b6bec81f1ce19f6b"),
+                                "productId" : "6057513b0e9f3e282942f61f",
+                                "quantity" : 1,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335163484_download%20%281%29.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-22T07:26:41.614Z")
+                }, 
+                {
+                    "paymentDetails" : {
+                        "paymendStatus" : "PENDING",
+                        "paymentMode" : "PREPAID"
+                    },
+                    "_id" : ObjectId("6058aaaedb4954160c09fb3e"),
+                    "orderDetails" : {
+                        "products" : [ 
+                            {
+                                "_id" : ObjectId("6058aaaedb4954160c09fb3f"),
+                                "productId" : "6057513b0e9f3e282942f61f",
+                                "quantity" : 1,
+                                "mainImageUrl" : "https://myglobalbazar-image-uploads.s3.ap-south-1.amazonaws.com/mainImage/mainImage_1616335163484_download%20%281%29.jpg",
+                                "price" : 2,
+                                "title" : "Jamdanisareetitle"
+                            }
+                        ]
+                    },
+                    "shippingDetails" : {
+                        "customerName" : "ShahidSyed",
+                        "addressLine1" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "addressLine2" : "172 P.G Road, Kolkata, Ranibala Apartment, TWR-A, 3RD Floor",
+                        "pinCode" : "700039",
+                        "state" : "west bengal",
+                        "city" : "Kolkata",
+                        "landMark" : "TWR-A, 3RD Floor",
+                        "phoneNumber" : "08017625345",
+                        "alterNativeNumber" : "08017625345",
+                        "email" : "shahidbusinesspersonnel@gmail.com"
+                    },
+                    "added_date" : ISODate("2021-03-22T14:33:18.912Z")
+                }
+            ]
+        }
+    ],
+    "__v" : 0
+}

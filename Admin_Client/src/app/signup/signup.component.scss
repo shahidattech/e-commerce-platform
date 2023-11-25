@@ -1,0 +1,19 @@
+// shared css for the login and signup page
+@import "../login/login.component.scss";
+.ng-valid,
+.ng-valid.required {
+  background-color: lightgreen;
+}
+
+.ng-invalid:not(form) {
+  background-color: lightcoral;
+}
+.was-validated .form-control:valid, .form-control.is-valid, .was-validated .custom-select:valid, .custom-select.is-valid {
+    border-color: #28a745 !important;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .custom-select.is-invalid {
+    border-color: #dc3545 !important;
+}
+.ng-valid, .ng-valid.required {
+    background-color: inherit;
+}

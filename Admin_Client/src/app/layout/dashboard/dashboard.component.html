@@ -1,0 +1,37 @@
+<div [@routerTransition]>
+    <h2 class="text-muted">Dashboard <small></small></h2>
+    <div class="row">
+        <div class="col-md-12">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let slider of sliders">
+                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+                    <div class="carousel-caption">
+                        <h3 style="color:black">{{slider.label}}</h3>
+                        <p style="color:black;font-size:large; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{slider.text}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'success'" (click)="orderList()" [icon]="'fa-shopping-cart'" [count]="orderCount" [label]="'Todays Orders!'" >{{orderCount}}</app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'warning'" (click)="customerList()" [icon]="'fa-users'" [count]="customerCount" [label]="'New Customers'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'danger'" (click)="reviewList()" [icon]="'fa-comments'" [count]="reviewsCount" [label]="'Recent Reviews!'"></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'primary'" (click)="productList()" [icon]="'fa-shopping-cart'" [count]="productCount" [label]="'Latest Products!'" ></app-stat>
+        </div>
+       
+        
+        
+    </div>
+    <hr />
+    <!-- <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert> -->
+    
+</div>

@@ -1,0 +1,51 @@
+<div class="bh-bazar-welcome">   
+    <mat-dialog-content>
+            <div class="card-block p-0">
+                <p>hello</p>
+            </div>            
+        <!-- <div class="div-sec">
+            <h2>Congratulations!!! <br>Your bank is now linked to your Website</h2>            
+        </div> -->
+        <div class="button-row">
+            <button mat-flat-button (click)="finish()">Close</button>
+        </div>            
+    </mat-dialog-content>
+ </div>
+
+
+ <style>
+     
+    /* .bh-bazar-welcome mat-dialog-content{
+        position: fixed;
+        left: 20%;
+        top: 0%;
+        background-color: white;
+        z-index: 100000;
+    } */
+    .bh-bazar-welcome mat-dialog-content h2{
+        color:yellow;
+    }
+    .bh-bazar-welcome mat-dialog-content p{
+        color:white;
+    }
+    .div-sec{
+        padding:25px;
+        /* height: 300px; */
+    }
+   
+    @media screen and (max-width: max-hight) {
+        .bh-bazar-welcome mat-dialog-content p{
+            /* width: 500px;
+            padding-left: 295px; */
+
+        }
+        .mat-dialog-content {
+            display: block;
+            /* margin: 0px -375px; */
+        }
+    }
+    .ngx-datatable.material{
+        overflow-x: scroll;
+    }
+
+</style>

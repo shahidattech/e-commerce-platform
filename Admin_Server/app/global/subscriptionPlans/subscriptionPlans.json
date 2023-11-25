@@ -1,0 +1,26 @@
+{
+    "plans": [{
+        "title": "1 Month",
+        "per_month": 200,
+        "gst_percentage": 18,
+        "total": 2,
+        "plan": "plan1"
+    }, {
+        "title": "2 Month",
+        "per_month": 200,
+        "gst_percentage": 18,
+        "total": 472,
+        "plan": "plan2"
+    },{
+        "title": "3 Month",
+        "per_month": 200,
+        "gst_percentage": 18,
+        "total": 708,
+        "plan": "plan3"
+    }],
+
+    "heading": {
+        "title": "Pricing",
+        "short_title": "My Global Bazar, ecommerce platform subscription."
+    }
+}

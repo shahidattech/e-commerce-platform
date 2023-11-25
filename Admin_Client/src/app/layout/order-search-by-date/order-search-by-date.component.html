@@ -1,0 +1,115 @@
+<div class="article_part_form col-lg-12">
+  <div class="col-lg-12 no-padding">
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [formGroup]="range">
+        <input matStartDate formControlName="start" placeholder="Start date">
+        <input matEndDate formControlName="end" placeholder="End date">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    
+      <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+      <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+    </mat-form-field>
+    
+    <p>Selected range: {{range.value | json}}</p> -->
+
+    <!-- <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field> -->
+
+    <h5>Select two dates</h5>
+
+    <ngb-datepicker #dp (select)="onDateSelection($event)" [dayTemplate]="t" outsideDays="hidden">
+    </ngb-datepicker>
+
+    <ng-template #t let-date let-focused="focused">
+      <span class="custom-day" [class.focused]="focused" [class.range]="isRange(date)"
+        [class.faded]="isHovered(date) || isInside(date)" (mouseenter)="hoveredDate = date"
+        (mouseleave)="hoveredDate = null">
+        {{ date.day }}
+      </span>
+    </ng-template>
+
+    <div *ngIf="fromDate && toDate">
+      <p>Order search from
+        <span>{{fromDate.day}}/</span><span>{{fromDate.month}}/</span><span>{{fromDate.year}}</span>
+        to
+        <span>{{toDate.day}}/</span><span>{{toDate.month}}/</span><span>{{toDate.year}}</span>
+      </p>
+      <button class="btn btn-primary" (click)="searchOrder()">Search</button>
+    </div>
+    <hr>
+    
+  </div>
+  <div class="col-lg-12 no-padding">
+    <div class="card card-default">
+      <div class="card-header">
+        Orders List
+      </div>
+      <div class="card-body">
+        <div class="col-lg-12 no-padding row">
+        </div>
+        <form class="table-responsive">
+          <table class="table table-hover table-striped" [mfData]="data | dataFilter : filterQuery : title"
+            #mf="mfDataTable" [mfRowsOnPage]="5" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy"
+            [(mfSortOrder)]="sortOrder">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <mfDefaultSorter by="picture">Order Date</mfDefaultSorter>
+                </th>
+                <th scope="col">
+                  <mfDefaultSorter by="firstName">Payment Status/Mode</mfDefaultSorter>
+                </th>
+                <th scope="col">
+                  <mfDefaultSorter by="userName">Order Status</mfDefaultSorter>
+                </th>
+                <th scope="col">
+                  <mfDefaultSorter by="userName">Order Details</mfDefaultSorter>
+                </th>
+                <th scope="col">
+                  <mfDefaultSorter by="userName">Shipping Details</mfDefaultSorter>
+                </th>
+                <th scope="col">
+                  <mfDefaultSorter by="userName">Action</mfDefaultSorter>
+                </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of data">
+                <td>
+                  {{item.added_date | date: 'MMM d, y, h:mm a'}}
+                </td>
+                <td>{{item.paymentDetails.paymendStatus}}<br />{{item.paymentDetails.paymentMode}}</td>
+                <td>{{item.orderStatus}}</td>
+                <td>
+                  <div class="row" *ngFor="let product of item.orderDetails.products">
+                    {{product.title }} (Q:{{product.quantity}}) <br>
+                  </div>
+                </td>
+                <td>
+                  <strong>Name:</strong> {{item.shippingDetails.customerName }} <br>
+                  <strong>Ph#</strong>{{item.shippingDetails.phoneNumber}} <br>
+                  <strong>Address </strong>{{item.shippingDetails.addressLine1}} {{item.shippingDetails.addressLine2}}
+                  <br> <strong>PinCode:</strong> {{item.shippingDetails.pinCode}} <br>
+                  <strong>Landmark</strong> {{item.shippingDetails.landMark}}
+                </td>
+                <td>
+                  <button class="btn btn-primary mb-2" (click)="viewOrderDetails(item)">Order details</button>
+                  <button type="button" class="btn btn-danger" (click)="shipNow(item)">Ship Now</button>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

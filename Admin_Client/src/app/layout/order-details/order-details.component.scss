@@ -1,0 +1,110 @@
+.card {
+    margin: auto;
+    // width: 38%;
+    max-width: 600px;
+    // padding: 4vh 0;
+    // box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top: 3px solid rgb(252, 103, 49);
+    border-bottom: 3px solid rgb(252, 103, 49);
+    border-left: none;
+    border-right: none;
+    width: 97%
+}
+
+@media(max-width:768px) {
+    .card {
+        width: 90%
+    }
+}
+
+.title {
+    color: rgb(252, 103, 49);
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 0 4%;
+    font-size: initial;
+}
+
+.title2 {
+    font-weight: 600;
+    margin-bottom: 1vh;
+    padding: 0 4%;
+    font-size: initial;
+    margin-top: 10px;
+}
+
+#details {
+    font-weight: 400
+}
+
+.info {
+    padding: 5% 4%
+}
+
+.shipinfo{
+    padding: 2px 2px 20px 20px;
+}
+
+.info .col-5 {
+    padding: 0
+}
+
+#heading {
+    color: grey;
+    line-height: 6vh
+}
+
+.pricing {
+    // background-color: #ddd3;
+    padding: 2vh 3%;
+    font-weight: 400;
+    // line-height: 2.5
+}
+.pricing .row{
+    background: #f5f4f4;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.pricing .col-3 {
+    padding: 0
+}
+
+.total {
+    padding: 2vh 8%;
+    color: rgb(252, 103, 49);
+    font-weight: bold
+}
+
+.total .col-3 {
+    padding: 0
+}
+
+.footer {
+    padding: 0 8%;
+    font-size: x-small;
+    color: black
+}
+
+.footer img {
+    height: 5vh;
+    opacity: 0.2
+}
+
+.footer a {
+    color: rgb(252, 103, 49)
+}
+
+.footer .col-10,
+.col-2 {
+    display: flex;
+    // padding: 3vh 0 0;
+    align-items: center
+}
+
+.footer .row {
+    margin: 0
+}
+.modal-body{
+    padding: 0;
+}
